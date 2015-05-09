@@ -1,0 +1,31 @@
+---
+layout: post
+title: Illumina Genome Analyzer Pipeline and LSF
+date: 2008-03-07 16:40:00.000000000 -06:00
+categories:
+- IT
+tags:
+- Illumina
+- informatics
+- IT
+- LSF
+- science
+status: publish
+type: post
+published: true
+meta:
+  blogger_blog: politigenomics.blogspot.com
+  blogger_author: dd
+  blogger_permalink: "/2008/03/illumina-genome-analyzer-pipeline-and.html"
+  _edit_last: '2'
+  _wp_old_slug: illumina-genome-analyzer-pipeline-and-lsf
+author:
+  login: dd
+  email: dooling@gmail.com
+  display_name: dd
+  first_name: David
+  last_name: Dooling
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>Many centers who use <a href="http://www.platform.com/Products/platform-lsf-family/platform-lsf-hpc/product-information">Platform LSF</a> to manage their computational cluster have had trouble running the Illumina (Solexa) <a href="http://www.illumina.com/pages.ilmn?ID=251">Genome Analyzer</a> Pipeline (GAPipeline).  The GAPipeline is the series of programs, scripts, and shell commands that performs the primary analysis (image analysis and base calling) and alignment for the Illumina Genome Analyzer.  The GAPipeline is tied together using fairly complex <a href="http://www.gnu.org/software/make/">Makefiles</a>.  The GAPipeline is very modular, i.e., it uses a lot of short-running scripts and programs to process the information from each image (tile) in parallel.  Unfortunately, the processes are so short and there are potentially so many of them, that they overwhelm the back-end messaging system that LSF's parallel make utility, lsmake, uses.  Eventually, you end up with two processes each waiting for a message from the other and the whole thing eventually just hangs.  So you end up having to kill the processes and restart the pipeline.  Fortunately, the fact that GAPipeline is based on make allows you to restart from where you left off, but it is more than just annoying if you have to do this several times for each execution of the pipeline and you have a dozen or so runs being analyzed at any given time.  This eventually became such a problem that we wrote a little script that manually parallelizes the GAPipeline on LSF, <a href="http://genome.wustl.edu/pub/software/lsgmake-gap/">lsgmake-gap</a>.  I would highly recommend using it if you have an Illumina Genome Analyzer and run LSF.</p>

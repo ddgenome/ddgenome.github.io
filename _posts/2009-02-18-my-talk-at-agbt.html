@@ -1,0 +1,42 @@
+---
+layout: post
+title: My talk at AGBT
+date: 2009-02-18 10:40:33.000000000 -06:00
+categories:
+- genomics
+tags:
+- '454'
+- AGBT
+- Creative Commons
+- genomics
+- Illumina
+- IT
+- science
+- software
+- wustl
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '2'
+author:
+  login: dd
+  email: dooling@gmail.com
+  display_name: dd
+  first_name: David
+  last_name: Dooling
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>Several people have asked me to post my slides from AGBT. Given the type of slides I prepare, I thought that might be less than useful, so I recorded my talk and posted it to <a href="http://blip.tv/file/1787219">blip.tv</a>. The narrative is a bit rough because I did it in one take a few weeks after I gave the talk, but all the basics are there (actually, it is a bit longer, 20 minutes, than the talk I gave at AGBT).</p>
+<div class="widevideo"><embed src="http://blip.tv/play/Ae3Uf5SFQQ" type="application/x-shockwave-flash" width="510" height="404" allowscriptaccess="always" allowfullscreen="true"></embed></div>
+<p>Here are the links that appear on the last slide.
+<ul>
+<li><a href="http://genome.wustl.edu/">The Genome Center</a></li>
+<li><a href="http://www.politigenomics.com/">PolITiGenomics (this) blog</a></li>
+<li><a href="http://www.biomedcentral.com/1471-2105/8/362">LIMS Paper</a></li>
+<li><a href="http://www.media-landscape.com/yapc/2006-06-27.ScottSmith/">YAPC UR presentation</a></li>
+</ul>
+<h3>The Odyssey</h3>
+<p>So you may be asking yourself, how did he generate a movie of his talk? Even if you are not asking yourself that, I am going to tell you so that if you need to do it (or if I need to do it again), you can avoid a lot of hassle. This was all done on a MacBook using a slide deck created in MS PowerPoint 2008. First I tested screen capture using <a href="http://www.videolan.org/vlc/">VLC</a>. It took a few tries with the video settings to make it not look terrible (use H.264 at 1024 kb/s bitrate, 25 or more fps, MPEG 4 encapsulation), but the audio capture did not work. To compensate for the lack of audio, I did audio capture using GarageBand (podcast project type) at the same time I did the video capture. I then loaded the audio and the video into iMovie HD, synchronized the audio to the video, clipped the beginning and the end, and exported. This resulted in a fair quality product. Being stupid, I thought I could do better. I next tested recording narration in MS PowerPoint, but there didn't seem to be a good way to export both a video of the slides with the recorded timings and the audio into a single format (not to mention it stupidly saves the audio in seemingly uncompressed files without an extension, one file per slide). So I imported the slides into Keynote 08, cleaned up the messes created by the import, recorded the slide show, and exported to QuickTime at high quality. This looked and played great in QuickTime so I went to upload it to <a href="http://www.youtube.com/user/ddgenome">YouTube</a>. Sorry, YouTube has a ridiculous and arbitrary limit of 10 minutes for a video. Moving on to <a href="http://ddgenome.blip.tv/">blip.tv</a> (which, nicely, also supports <a href="http://creativecommons.org/">Creative Commons</a> licensing), I uploaded the video. After waiting for it to convert, I played it and noticed that although the audio was fine, the slides did not advance. Thinking something was wrong with the blip.tv Flash converter, I moved on to <a href="http://www.vimeo.com/user1315280/videos">Vimeo</a>. Slides didn't advance there either. So next I checked the video by watching it using VLC and <a href="http://www.mplayerhq.hu/\"">mplayer</a>. No slide advancement. Trying to fix it, I went into the custom video settings when exporting in KeyNote, trying all sorts of combinations to generate a video that played well in VLC. Using various settings, I was able to get the slides to advance for a while, but eventually they would stop. Audio was always fine. I tried upgrading to Mac OS X 10.5. Still no luck (although in 10.5, VLC can capture from the iSight camera, so maybe audio capture will work in VLC now). I then recalled that the MPEG-2 on Mac was a little quirky (QuickTime won't played decoded Tivo Series 2 video without first converting them to MPEG-4 using <a href="http://ffmpeg.org/">ffmpeg</a>). As a last ditch effort, I imported the KeyNote exported movie into iMovie HD as an MPEG-4 project. I check to make sure iMovie HD played it correctly, then exported at full quality as an MPEG-4. This ballooned the size of the video from around 20 MB to over 110 MB, lessened the quality, and introduced a strange pulsing phenomena in the slides (probably due to compression degradation being corrected by key frames every second or so), but it seemed to play correctly in VLC and was higher quality than the VLC capture video. This video, uploaded to blip.tv, is what you see above.</p>
+<p><strong>Update:</strong> Here is how <a href="http://www.lessig.org/blog/2008/07/one_step_until_brilliant_scree.html">Lawrence Lessig screencasts</a>.</p>

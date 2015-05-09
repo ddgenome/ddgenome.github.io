@@ -1,0 +1,73 @@
+---
+layout: post
+title: What's in an Illumina GA run directory?
+date: 2009-10-28 16:46:40.000000000 -05:00
+categories:
+- genomics
+- IT
+tags:
+- genomics
+- Illumina
+- informatics
+- IT
+- storage
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '2'
+author:
+  login: dd
+  email: dooling@gmail.com
+  display_name: dd
+  first_name: David
+  last_name: Dooling
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>One of the main things that differentiates genomics from other endeavors that use a lot of disk space is that genomics file systems tend to have a <em>lot</em> of files (millions). This was true with Sanger sequencing, and it seems to be even more true with next-generation sequencing technologies, especially Illumina/Solexa and AB SOLiD. This large number of files and the parallel access of these files by large computational clusters tends to give most storage solutions great difficulty.</p>
+<p>So what, exactly, is in an Illumina run directory? Well, to get breakdowns of file statistics there is a nifty little tool called <a href="http://www.pdsi-scidac.org/fsstats/">fsstats</a>. It is just a simple Perl script that crawls through a directory stat'ing files and reporting metrics. For example, when you run it on an Illumina GA IIx 2&times;100, high cluster density run after the primary analysis has completed, you get the following information about the distribution of file sizes. (I have rearranged and condensed the information to make it fit.)</p>
+<pre style="font-size: x-small; line-height: normal;">
+total 7.46 TB used to store 7.46 TB user data, overhead 0.04%
+  count=991227 avg=8076.50 KB
+  min=0.00 KB max=13128679.30 KB
+           size range    count   %tot  %tot cum       total size   %tot  %tot cum
+[       0-       2 KB):   4019 ( 0.41) (  0.41)       3009.03 KB ( 0.00) (  0.00)
+[       2-       4 KB):      2 ( 0.00) (  0.41)          6.99 KB ( 0.00) (  0.00)
+[       4-       8 KB):    981 ( 0.10) (  0.50)       5964.82 KB ( 0.00) (  0.00)
+[       8-      16 KB): 193351 (19.51) ( 20.01)    2588619.88 KB ( 0.03) (  0.03)
+[      16-      32 KB):   2656 ( 0.27) ( 20.28)      58586.79 KB ( 0.00) (  0.03)
+[      32-      64 KB):    901 ( 0.09) ( 20.37)      31369.79 KB ( 0.00) (  0.03)
+[      64-     128 KB):   2893 ( 0.29) ( 20.66)     303872.38 KB ( 0.00) (  0.04)
+[     128-     256 KB):      2 ( 0.00) ( 20.66)        345.34 KB ( 0.00) (  0.04)
+[     256-     512 KB):      4 ( 0.00) ( 20.66)       1222.53 KB ( 0.00) (  0.04)
+[     512-    1024 KB):      1 ( 0.00) ( 20.66)        622.26 KB ( 0.00) (  0.04)
+[    1024-    2048 KB):      2 ( 0.00) ( 20.66)       3199.89 KB ( 0.00) (  0.04)
+[    2048-    4096 KB):     12 ( 0.00) ( 20.66)      41779.69 KB ( 0.00) (  0.04)
+[    4096-    8192 KB): 776654 (78.35) ( 99.02) 5863161178.18 KB (73.24) ( 73.28)
+[   16384-   32768 KB):     21 ( 0.00) ( 99.02)     487156.46 KB ( 0.01) ( 73.28)
+[   32768-   65536 KB):   3856 ( 0.39) ( 99.41)  163552521.17 KB ( 2.04) ( 75.32)
+[   65536-  131072 KB):   3825 ( 0.39) ( 99.79)  307535341.32 KB ( 3.84) ( 79.17)
+[  131072-  262144 KB):    133 ( 0.01) ( 99.81)   32458046.12 KB ( 0.41) ( 79.57)
+[  262144-  524288 KB):   1787 ( 0.18) ( 99.99)  658830514.46 KB ( 8.23) ( 87.80)
+[ 2097152- 4194304 KB):     16 ( 0.00) ( 99.99)   47898262.36 KB ( 0.60) ( 88.40)
+[ 4194304- 8388608 KB):     64 ( 0.01) (100.00)  432084134.39 KB ( 5.40) ( 93.80)
+[ 8388608-16777216 KB):     47 ( 0.00) (100.00)  496603147.67 KB ( 6.20) (100.00)
+</pre>
+<p>So the total size of the run directory is nearly 7.5 TB and there are almost one million files. The average size of a file in the run directory is about 8 MB and the maximum size is over 13 GB. The images (represented in the 4096-8192 KB range), comprise over 78% of the files and 73% of the total size of the run directory. This significant penalty can be avoided by using RTA and not transferring image files. The largest files are the alignment (ELAND) outputs and the FASTQ files in the GERALD directory. Speaking of directories, here is a breakdown by number of files in each directory.</p>
+<pre style="font-size: x-small; line-height: normal;">
+  count=1652 avg=601.02 ents
+  min=0.00 ents max=24720.00 ents
+              range   count   %tot  %tot cum total ent   %tot  %tot cum
+  [    0-    1 ents]:     4 ( 0.24) (  0.24)      0.00 ( 0.00) (  0.00) 
+  [    2-    3 ents]:     1 ( 0.06) (  0.30)      2.00 ( 0.00) (  0.00) 
+  [    8-   15 ents]:     3 ( 0.18) (  0.48)     26.00 ( 0.00) (  0.00) 
+  [   16-   31 ents]:     2 ( 0.12) (  0.61)     44.00 ( 0.00) (  0.01) 
+  [  128-  255 ents]:     9 ( 0.54) (  1.15)   1826.00 ( 0.18) (  0.19) 
+  [  256-  511 ents]:  1616 (97.82) ( 98.97) 775680.00 (78.12) ( 78.32) 
+  [  512- 1023 ents]:     3 ( 0.18) ( 99.15)   2920.00 ( 0.29) ( 78.61) 
+  [ 1024- 2047 ents]:     4 ( 0.24) ( 99.39)   7845.00 ( 0.79) ( 79.40) 
+  [ 2048- 4095 ents]:     2 ( 0.12) ( 99.52)   6775.00 ( 0.68) ( 80.08) 
+  [16384-32767 ents]:     8 ( 0.48) (100.00) 197760.00 (19.92) (100.00)
+</pre>
+<p>The picture for directory entries is a bit muddled since most of the directories are organized around a small multiple of the number of tiles per lane, falling in the 256-511 entries range. The directories in the 16384-32767 entries range? The image analysis (Firecrest) Temp/L00[1-8] directories, each with 24,720 entries (four <code>clu.txt</code> per tile (one per color) and one <code>qcm.xml</code> (XML!) file for each cycle for each tile in a lane).</p>

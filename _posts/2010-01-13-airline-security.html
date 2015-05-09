@@ -1,0 +1,26 @@
+---
+layout: post
+title: Airline security
+date: 2010-01-13 15:59:56.000000000 -06:00
+categories:
+- IT
+tags:
+- cloud
+- compute
+- informatics
+- IT
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '2'
+author:
+  login: dd
+  email: dooling@gmail.com
+  display_name: dd
+  first_name: David
+  last_name: Dooling
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>Despite the fact that I was traveling when I wrote this, this post is not about air travel, but it is about security. One topic that continually comes up when the subject of cloud computing is discussed is security. A recent article in MIT Technology Review, <a href="http://www.technologyreview.com/web/24166/">Security in the Ether</a>, discusses the issues. CNN tries to scare you with a title like <a href="http://www.cnn.com/2009/TECH/11/04/cloud.computing.hunt/index.html">A trip into the secret, online 'cloud'</a>. Spooky stuff. It's not a cloud, it's a 'cloud'. And it's secret. (Secret? Really? There are a lot of words that come to mind when I think of compute clouds, but secret is not one of them. Just about every talk at OSCON last year mentioned the cloud.) Now the <a href="http://arstechnica.com/tech-policy/news/2010/01/ftc-reminds-us-that-storing-data-in-the-cloud-has-drawbacks.ars">FTC wants the FCC to warn consumers</a> that storing personal data "in the cloud" makes it easier for "hackers" to access it (and by hackers I mean federal law enforcement officials). While I agree that consumers should be careful about the type of information they share and store online (an admonition that is likely lost on the <a href="http://www.eweekeurope.co.uk/news/facebook-s-zuckerberg-questions-privacy-expectations-2983">Facebook generation</a>) and think about <a href="http://www.guardian.co.uk/technology/2009/sep/02/cory-doctorow-cloud-computing">the larger issues around the cloud</a> like ownership and control, personal information is not really a more significant issue in bioinformatics cloud computing than in bioinformatics local computing (other than the issue of the credit card number you use to pay for the service). Sure, if you are sequencing human genomes you need to transfer the data to and from the cloud securely, but for most projects we have to submit the data to central repositories anyway. So transferring data in a secure way, whether it be to clouds or NCBI, is a largely solved problem (data transfer rates notwithstanding). "How can we secure our data in the cloud?" is the common question that arises in cloud computing. While the consideration of security in the context of the cloud computing is laudable, it is likely (and unfortunate) that the same people raising the specter of security in the cloud don't think as much about security on their own systems. In a <a href="/2010/01/head-in-the-clouds.html">recent post</a> I mentioned how dead simple it was to perform security updates on an Ubuntu system. Unfortunately, despite it being simple, it often doesn't get done. However, what is more insidious is a different kind of cloud security: wireless networks. A wireless network provides anyone with a <a href="http://www.oreillynet.com/cs/weblog/view/wlg/448">Pringles can</a> "physical" access to your network, yet often only minimal if any security is used on these networks.  Add to that often lax physical security around company and university networks and I have to say I don't really see data security as a major concern for me when it comes to cloud computing. That is not to say it is not a concern, rather that it does not concern me in the cloud much more than it does on my own network.</p>

@@ -1,0 +1,28 @@
+---
+layout: post
+title: The ls in lsgmake-gap
+date: 2009-04-03 16:15:54.000000000 -05:00
+categories:
+- genomics
+- IT
+tags:
+- genomics
+- Illumina
+- IT
+- LSF
+- wustl
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '2'
+author:
+  login: dd
+  email: dooling@gmail.com
+  display_name: dd
+  first_name: David
+  last_name: Dooling
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>I have released a new version of <a href="ftp://genome.wustl.edu/pub/software/lsgmake-gap/">lsgmake-gap</a>, <a href="ftp://genome.wustl.edu/pub/software/lsgmake-gap/lsgmake-gap-0.13.tar.gz">0.13</a> (<a href="ftp://genome.wustl.edu/pub/software/lsgmake-gap/lsgmake-gap-0.13.tar.gz.md5.txt">md5</a>). This version puts the "ls" back in lsgmake-gap by adding the <code>--bsub-options</code> command-line option which allows the user to specify arbitrary options to bsub. So now you should be able to easily take advantage of all the power of <a href="http://www.platform.com/Products/platform-lsf">LSF</a>. Also, if you have had problems with job-name dependency trouble because of lsgmake-gap's reuse of job names when resubmitting a failed analysis, there is now the <code>--id</code> command-line option to provide a unique identifier for each execution.</p>

@@ -1,0 +1,31 @@
+---
+layout: post
+title: NASty
+date: 2008-02-15 17:26:00.000000000 -06:00
+categories:
+- IT
+tags:
+- informatics
+- IT
+- NAS
+- storage
+status: publish
+type: post
+published: true
+meta:
+  blogger_blog: politigenomics.blogspot.com
+  blogger_author: dd
+  blogger_permalink: "/2008/02/nasty.html"
+  _edit_last: '1'
+author:
+  login: admin
+  email: ddgenome@gmail.com
+  display_name: admin
+  first_name: ''
+  last_name: ''
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>We have a lot of disk storage at <a href="http://genome.wustl.edu/">The Genome Center</a>.  Over 700 TB.  We have a wide variety of storage in use.  Different architectures: local, SAN, NAS, iSCSI.  Different vendors: Hitachi, EMC, StorageTek/Sun, NetApp, BlueArc, Dell, etc.  Different access methods: direct attach, NFS, and CIFS.  I am not going to talk about all these options in this post.  I am going to focus on accessing NAS storage via NFS.  We have products from two major NAS vendors in production currently: <a href="http://www.netapp.com/">NetApp</a> and <a href="http://www.bluearc.com/">BlueArc</a>.  We have several hundred TB of each vendors disks in house.  We have several different NetApp heads: FAS980s, R200s, FAS270s, and FAS3070s.  Most of the heads are clustered with another like head for high availability.  For BlueArc, we simply have two Titan 2200 heads clustered for high availability.  Astute readers may already have intuited one difference between NetApp and BlueArc: BlueArc heads can serve a <span style="font-weight:bold;">lot</span> more disk than NetApp heads.  This is because the BlueArc head does most operations in hardware (<a href="http://en.wikipedia.org/wiki/Field-programmable_gate_array">FPGAs</a>) while the NetApp runs on CPUs.  So even though the NetApp's operating systems is stripped down and tuned for serving filesystems out via NFS and CIFS, it can't really scale like a hardware solution.  Another reason for the better scaling of the BlueArc system is that their RAID controllers are hardware-based and distributed over the disk arrays.  NetApp, on the other hand, does all its RAID calculations on the head, in software.  The end results is that the BlueArc heads can front a lot more disk and scale to a lot more clients than a NetApp head.  This disk serving limitation is further exacerbated by the fact that NetApp's WAFL file system has a significant overhead in regard to disk utilization.  You know that shiny, new 1 TB SATA drive you plug in to your NetApp systems?  Expect to see about 600 GB of it usable after RAID and formatting.  Ouch.</p>
+<p>Despite the disk-eating tendencies of the WAFL file system, it is a <a href="http://www.theregister.co.uk/2007/06/13/schwartz_v_torvalds/">nice filesystem</a>.  It handles large and small files very efficiently space-wise, has excellent performance on large and small files (sequencing generates a lot of small files), is very efficient in taking and storing snapshots, and maintains integrity when hardware fails.  BlueArc's Silicon File System, on the other hand, is problematic.  By default, it has a fixed 32 kB blocks size, which eats a lot of storage if you have millions of small files.  It uses a linked-list data structure for directories, which has <span style="font-weight:bold;">terrible</span> performance when you get over a few thousand files in a directory.  For some reason, it takes a ridiculously long time to delete files (even the slowness of the linked-list directory structure does not account for it).  Finally, the size of a directory is really big.  Why does this matter?  Well, if you have Linux clients, the large size causes Linux to look up attributes on each file when it is getting a directory listing rather than using the READDIRPLUS capability of NFS.  The result?  You guessed it: poor performance when listing a directory (and a lot of things list directories, not just ls).</p>
+<p>Now, if you use BlueArc storage for serving large media files or Microsoft Exchange databases, none of this small file stuff is likely to ever affect you.  However, the other downside to BlueArc might.  Basically, the BlueArc system is just not as mature as the NetApp system.  For enterprise applications, you need your system up 24/7.  You need to be able to use your HA cluster to perform upgrades live.  You need to be able to survive hardware failures.  You need to be able to recover quickly when things go south.  NetApp has a huge edge in these areas.  All disk systems are going to have failures.  What matters is how the system responds and whether it is still able to serve the disk.</p>

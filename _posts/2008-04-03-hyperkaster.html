@@ -1,0 +1,40 @@
+---
+layout: post
+title: Hyperkaster
+date: 2008-04-03 12:35:00.000000000 -05:00
+categories:
+- genomics
+tags:
+- AGBT
+- genomics
+- Illumina
+- informatics
+status: publish
+type: post
+published: true
+meta:
+  blogger_blog: politigenomics.blogspot.com
+  blogger_author: dd
+  blogger_permalink: "/2008/04/hyperkaster.html"
+  _edit_last: '2'
+author:
+  login: dd
+  email: dooling@gmail.com
+  display_name: dd
+  first_name: David
+  last_name: Dooling
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p><a href="http://www.fender.com/products/prod_images/guitars/0100202850_md.png" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img style="float:right; margin:0 0 10px 10px;cursor:pointer; cursor:hand;width: 200px;" src="assets/0100202850_md.png" border="0" alt="" /></a> No, this post is not about the latest <a href="http://www.fender.com/">Fender guitar</a>.  It is about the Illumina Genome Analyzer II (or GA2), formerly known as the Hyperkaster.  This latest rev of the Solexa instrument boasts an almost entirely new optics system, wider flow cell lanes, faster run times, longer reads, and about twice as much data per run.  The camera has been upgraded from a 1 megapixel <a href="Chttp://en.wikipedia.org/wiki/Charge-coupled_device">CCD</a> to a 4 megapixel CCD, thus each picture (or tile in Solexa-speak) captures four times the area the old system did.  This means that even with the 40% wider flow cell lanes, you have to take fewer images to cover the flow cell.  If you are familiar with the current instrument, that means instead of taking 3×110 images per lane per color, you take 2×50 images.  Fewer images means faster imaging, which leads to shorter run times.  For a 50 cycle fragment run, the run time should be about 2.3 days; down from 3.2 days (multiple by two to get your paired-end run times).  One problem with the larger image area is ensuring even illumination across the image (since the laser used to excite the fluorescing molecules is much smaller than the area of the image).  To address this, the system now uses a square beam shaper.  The new beam shaper coupled with the improved mode scrambler lead to more even illumination on the larger images as compared to the old optical system with the smaller images.  Nonetheless, there are still edge effects from the imaging.  However, larger images, fewer images, and more even illumination means the edge effects affect a much smaller proportion of the clusters in the flow cell.</p>
+<p>Another major change in the GA2 is the addition of the <a href="http://www.solexa.com/pages.ilmn?ID=270">IPAR computer</a>.  This system allows the analysis of images to obtain intensities during the chemistry portion of the instrument cycle.  This means that it is possible to no longer have to transfer the 1.8 TB of raw images that the instrument generates during a paired-end run.  Unfortunately, the IPAR runs on Microsoft Windows, breaking with the <a href="/2008/01/platform-independent.html">run-anywhere philosophy</a> of previous versions of Solexa's image analysis pipeline.</p>
+<p>Here are some raw specs for a paired-end run on a GA2.</p>
+<ul>
+<li>4 gigabases (Gb) of sequence</li>
+<li>5 days</li>
+<li>1800 GB of images</li>
+<li>300+ GB for image analysis (Firecrest)</li>
+<li>60+ GB for base calling (Bustard)</li>
+<li>10-30 GB for sequence analysis and alignment (GERALD)</li>
+</ul>
+<p>As you can see, this system approaches nearly 1 Gb of sequence per day.  Unfortunately, with the name changed to GA2, we will probably not receive a free guitar with each instrument purchase.</p>

@@ -1,0 +1,32 @@
+---
+layout: post
+title: 454 XLR-HD
+date: 2008-06-12 10:58:01.000000000 -05:00
+categories:
+- genomics
+- IT
+tags:
+- '454'
+- compute
+- FLOSS
+- genomics
+- informatics
+- IT
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '2'
+author:
+  login: dd
+  email: dooling@gmail.com
+  display_name: dd
+  first_name: David
+  last_name: Dooling
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>The next upgrade of the <a href="http://www.genome-sequencing.com/">454 FLX</a> platform is called Titanium.  The previous name gave a better indication of what the upgrade entails: XLR-HD which is short for eXtra Long Reads-High Density.  The XLR is due to the run having twice the number of cycles so the average read length will increase from 250 to 400 bases (the average read length is not exactly double due to nucleotide flow order, mononucleotide runs, degraded signal as the number of cycles increase, etc.).  The HD is due to smaller, more densely packed wells on the picotiter plate which increases the number of DNA fragments sequenced per run.  Putting these together, 454 FLX Titanium runs will quintuple their data output from 100 Mb to about 500 Mb (or more).</p>
+<p>This increase in data does not come without a price.  Up until now, the primary analysis (image processing and base calling) of 454 data was able to be performed in a few hours on a moderately powerful computer.  With the increased data output, primary analysis requires a small cluster: 20 cores with 1 GiB RAM per core having shared access to 1-2 TB of disk space.  While those are the minimal requirements, 10 cores per run region seem to be the sweet spot for best performance.  The initial production release will support <a href="http://www.redhat.com/">Red Hat</a>-compatible GNU/Linux distributions (<a href="http://www.redhat.com/rhel/">RHEL</a>, <a href="http://www.centos.org/">CentOS</a>, and <a href="http://fedoraproject.org/">Fedora</a>).  Previous releases also only officially supported Red Hat-like operating systems but we have not had a problem running them on <a href="http://www.debian.org/">Debian GNU/Linux</a> (454 also indicated they are pushing toward <a href="http://www.linuxfoundation.org/en/LSB">LSB3</a> compliance).  Fortunately, 454 is eliminating the hard-coded dependence that the software be installed and the analysis processes have write access to <code>/usr/local/rig</code>.  This will make installation across a cluster much easier.  They are also abandoning their custom <a href="http://en.wikipedia.org/wiki/Inter-process_communication">IPC</a> implementation in favor of the "standard" <a href="http://www.mpi-forum.org/">MPI</a>, specifically <a href="http://www.open-mpi.org/">OpenMPI</a> or <a href="http://www.mcs.anl.gov/research/projects/mpich2/">MPICH2</a>.  While it is good that they are using a standard IPC implementation, it is unfortunate that MPI implementations are so fragmented and often incompatible, i.e., if one vendor uses MPICH2 and another uses <a href="http://www.lam-mpi.org/">LAM</a>, you need to set up different systems to support each because they cannot coexist on the same system without problems.</p>
+<p>I know this is unrelated to informatics, but if you will allow me to journey back to my transport phenomena days as a chemical engineer, the new picotiter plate requires much smaller beads, about 1 micron in diameter.  At these length scales, <a href="http://www.engr.wisc.edu/che/newsletter/2001-02_fallwinter/transport.html">transport phenomena</a>, specifically boundary affects and polymer diffusion, may become important during the emulsion PCR and sequencing.  Someone needs to calculate a <a href="http://www.efunda.com/formulae/fluids/calc_reynolds.cfm">Reynolds number</a>.</p>
+<p>Oh, one more thing, there is talk of paired-end reads with 20 kb inserts.</p>

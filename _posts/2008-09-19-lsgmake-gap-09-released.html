@@ -1,0 +1,30 @@
+---
+layout: post
+title: lsgmake-gap-0.9 released
+date: 2008-09-19 15:34:47.000000000 -05:00
+categories:
+- genomics
+- IT
+tags:
+- genomics
+- Illumina
+- informatics
+- IT
+- LSF
+- science
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '2'
+author:
+  login: dd
+  email: dooling@gmail.com
+  display_name: dd
+  first_name: David
+  last_name: Dooling
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>About a year ago Tim Cutts from Sanger suggested I modify (he was being nice, improve is more accurate) <a href="/2008/03/illumina-genome-analyzer-pipeline-and.html">lsgmake-gap</a> to use LSF's job arrays rather than spawning a separate job for each per-lane step in the GAPipeline. A year is too long to for a good suggestion like that not to be implemented, nonetheless it has taken me about that long to get around to doing it. But, hey, it's done now and you can download the new version: <a href="http://genome.wustl.edu/pub/software/lsgmake-gap/lsgmake-gap-0.9.tar.gz">lsgmake-gap-0.9.tar.gz</a>. Next on the list is modifying lsgmake-gap to be able to handle the auto-calibration lane in GERALD (available in GAPipeline-1.0, although the Pipeline parallelisation documentation has not been updated). Hopefully it won't take me a year to get around to implementing that. You can also get <a href="http://genome.wustl.edu/pub/software/lsgmake-gap/">any older version of lsgmake-gap</a>.</p>
+<p><strong>Update:</strong> I have released <a href="http://genome.wustl.edu/pub/software/lsgmake-gap/lsgmake-gap-0.10.tar.gz">lsgmake-gap-0.10.tar.gz</a> that changes the default number of make jobs from two to one.</p>

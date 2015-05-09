@@ -1,0 +1,33 @@
+---
+layout: post
+title: Bioinformatics and cloud computing
+date: 2009-11-24 14:54:22.000000000 -06:00
+categories:
+- genomics
+- IT
+tags:
+- cloud
+- compute
+- FLOSS
+- genomics
+- Illumina
+- informatics
+- IT
+- software
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '2'
+author:
+  login: dd
+  email: dooling@gmail.com
+  display_name: dd
+  first_name: David
+  last_name: Dooling
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>From the <a href="http://www.mcs.anl.gov/events/workshops/sc09-sysbio/index.php">Using clouds for parallel computations in systems biology</a> workshop at the recent <a href="http://sc09.supercomputing.org/">SC09 conference</a> (<a href="http://www.genomeweb.com/blog/cloud-bio-computing-sc09">Informatics Iron writeup</a>) to last month's <a href="http://www.genomeweb.com/informatics/genome-informatics-speakers-say-second-gen-sequencing-makes-giddy-times-bioinfor">Genome Informatics meeting</a>, everyone in bioinformatics is talking about cloud computing these days. Last week <a href="http://genome.fieldofscience.com/">Steven Salzberg</a>'s <a href="http://www.cbcb.umd.edu/~salzberg/">group</a> published a paper on their Crossbow tool entitled <a href="http://genomebiology.com/2009/10/11/R134">Searching for SNPs with cloud computing</a> (<a href="http://www.cloudera.com/blog/2009/10/15/analyzing-human-genomes-with-hadoop/">Cloudera blog post on Crossbow</a>). In the paper the authors describe how they were able to analyze the human sequence data <a href="http://www.nature.com/nature/journal/v456/n7218/abs/nature07484.html">published last year by BGI</a> using <a href="http://aws.amazon.com/ec2/">Amazon EC2</a>.  Specifically, they have developed an alignment (<a href="http://bowtie-bio.sourceforge.net/index.shtml">bowtie</a>) and SNP detection (<a href="http://soap.genomics.org.cn/soapsnp.html">SoapSNP</a>) pipeline that is executed in parallel across a cluster using the <a href="http://hadoop.apache.org/">Hadoop</a> framework (a <a href="http://fsf.org/">free software</a> implementation of <a href="http://labs.google.com/papers/mapreduce.html">Google's MapReduce</a> framework).  Using a 40-node, 320-core EC2 cluster, they were able to analyze 38&times; coverage sequence data in about three hours. The whole analysis, including data transfer and storage on <a href="http://aws.amazon.com/s3/">Amazon S3</a>, cost about $125. You can find a more detailed cost breakdown and comparison on Gary Stiehr's <a href="http://hpcinfo.com/2009/11/22/benchmarking-the-cloud-for-genomics/">HPCInfo post</a><a> and more detail on the SNP detection on Dan Koboldt's </a><a href="http://www.massgenomics.org/2009/11/crossbow-ngs-informatics-in-the-cloud.html">Mass Genomics post</a>.</p>
+<p>For analyzing a single genome, you really can't beat that price.  Of course, at the rate next-generation sequencing instruments are generating data, most people are not going to want to analyze just one genome. So the question becomes, what is the break even point? That is, how many genomes do you have to sequence to make buying compute resources cheaper than renting them from Amazon? We currently estimate that the fully loaded (node, chassis, rack, networking, etc.) cost of a single computational core is about $500. Thus, to purchase 320 cores would cost you about $160,000.  It's going to take a lot (1280) genomes to hit that break even point. But, do you really need to analyze a genome in three hours? With the current per run throughput of a single Illumina GA IIx, it would take about four ten-day runs (40 days) to generate 38&times; coverage of a human genome. After each run, you could align the sequence data from that run. Each lane of data would take 8-12 core&middot;hours to align, so a whole run's (eight lanes') worth of data would take about 80 core&middot;hours. Therefore, even if you had just one core, you could align all the data before the next run completed. The consensus calling and variant detection portions of the pipeline typically take a handful of core&middot;hours and therefore do not change the economics; they too can be completed before the first run of the next genome is completed. Thus, with a $500 investment in computational resources, you can more than keep pace with the Illumina instrument. Note that I am completely excluding the cost of storage, as that will be needed for the data and results regardless of where the computation is done. Of course, you probably wouldn't buy just <em>one</em> core. Checking over at the <a href="http://www.dell.com/us/en/highered/df.aspx?refid=df&s=hied&cs=RC956904&~ck=mn">Dell Higher Education web site</a>, you can get a Quad Core Precision T3500n with 4 GiB of RAM (more RAM per core than the <a href="http://aws.amazon.com/ec2/#instance">Amazon EC2 Extra Large Instance</a> used in the paper) and 750 GB local storage capacity (about the same storage per core as the Extra Large Instance) for $1700. You would need less than one core's (25%) of that workstation's capacity dedicated to alignment of and variant detection on data from a single Illumina GA IIx (thanks to <a href="http://en.wikipedia.org/wiki/Burrows-Wheeler_transform">Burrows-Wheeler Transform</a> aligners like bowtie and <a href="http://bio-bwa.sourceforge.net/">bwa</a>). Using the single core numbers, the break even point for purchase versus cloud is less than five whole genomes. Using  the entire cost of the Dell workstation (even though you require less than 25% of its computational capacity), the break even point is about 14 genomes. It would take about 1.5 years (about half the expected life of IT hardware) at current throughput to sequence 14 genomes with a single Illumina GA IIx. At data rates expected in January 2010, it would take less than a year to break even.</p>
+<p>These numbers indicate that unless you are just sequencing a few genomes, you are probably better off purchasing a (possibly single node) cluster. With the proliferation of sequencing applications and publications in the last couple years, not many researchers will fall into the "few genomes" bin. Our experience has been that the more sequencing data people get, the more they want. Another way to look at this is that the entire analysis computational hardware costs (<$1700) is less than 1% of the sequencing instrument cost; or the computational cost to analyze a whole genome (<$500) is less than 1% of the total data generation costs (reagents, flow cells, instrument depreciation, technician time, etc.). This is all not to say that there is not a place for cloud and other distributed computing frameworks in bioinformatics, but that's the topic of a future post.</p>

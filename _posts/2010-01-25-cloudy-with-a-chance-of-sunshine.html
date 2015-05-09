@@ -1,0 +1,31 @@
+---
+layout: post
+title: Cloudy with a chance of sunshine
+date: 2010-01-25 07:20:42.000000000 -06:00
+categories:
+- IT
+tags:
+- cloud
+- compute
+- IT
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '2'
+author:
+  login: dd
+  email: dooling@gmail.com
+  display_name: dd
+  first_name: David
+  last_name: Dooling
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>As stated in previous posts (<a href="/2009/11/bioinformatics-and-cloud-computing.html">Bioinformatics and cloud computing</a> and <a href="/2010/01/head-in-the-clouds.html">Head in the clouds</a>), I don't think that cloud computing wins the cost competition with local resources. However, there are several reasons why an organization should consider cloud computing. Several of the reasons I present below are discussed in a great interview with Russ Daniels of HP at ars technica, <a href="http://arstechnica.com/business/news/2008/12/hp-cloud-computing-interview.ars/1">Into the cloud: a conversation with Russ Daniels, Part I</a> and <a href="http://arstechnica.com/business/news/2009/02/into-the-cloud-a-conversation-with-russ-daniels-part-ii.ars/1">Part II</a>. If you are at all curious about cloud computing, it is well worth reading. (You may also be interested in the <a href="http://dsl.cs.uchicago.edu/ScienceCloud2010/index.html">ScienceCloud 2010 Workshop</a>.)</p>
+<h3>Peaks and valleys</h3>
+<p> The ability to dynamically provision computing resources is integral to the concept of clouds. Dynamic provisioning is often used by online retailers to account for variability in consumer buying. The retailer may have 20 servers that it maintains year round to service average purchasing but also dynamically add servers in the cloud to account for peaks in purchasing, e.g., around the Christmas holiday. In bioinformatics, there are often computational crunches before papers get submitted or before meetings or when a mistake in an algorithm is found and a large amount of calculations need to be redone (<a href="http://pages.cs.wisc.edu/~miron/">Miron Livny</a> of Condor and Open Science Grid calls these "oopses"). Another type of dynamic provisioning involves varying levels of certain hardware architectures or operating systems as needed by current computational demand. For example, certain applications may require x86 and Ubuntu 8.04 LTS while another may require amd64/em64t/x86_64 and Ubuntu 9.10. If the utilization of each of these programs is cyclical, you can provision the exact system you want when it is needed. This can be done using something like Amazon EC2 <em>or</em> an internal cloud. Thus, dynamic provisioning allows IT departments to design their solutions for steady state operations but still meet computational needs during peaks.</p>
+<h3>Space, the final frontier</h3>
+<p>At universities all over the world there is a constant battle for space. Researchers are always seeking more and administrators are always miserly about allocating it. If your computing needs expand beyond your ability to house, power, and cool them, cloud computing offers a solution. While it may not be cheaper than if the space, power, and cooling was available and paid for out of your grant overhead, it will almost certainly be cheaper than buying your own land and building your own data center. Of course, what people traditionally think of as cloud computing, e.g., Amazon EC2, is not the only option here. There are collocation facilities and scientific computing resources, e.g., <a href="http://www.ncsa.illinois.edu/">NCSA</a> and <a href="http://www.opensciencegrid.org/">Open Science Grid</a>. The latter are normally acquired through a granting process.</p>
+<h3>Persistence pays off</h3>
+<p>Cloud computing is also very attractive because of its persistence. If I have my computing and storage in the cloud, I can access it from anywhere. When the power goes out at my office, I can use my phone to access the data. When my computer crashes, the computation is still running on the cloud. When my disk fails, my data is still in the cloud. Of course, the cloud does fail at times too. Amazon promises 99.9% uptime, or nearly 9 hours of downtime per year. Of course, if the cloud resources are pulling data from your site (something that may take more time than the computation with current solutions), when your systems go down, you're still out of luck.</p>

@@ -1,0 +1,33 @@
+---
+layout: post
+title: What's in an SRF?
+date: 2008-06-30 16:21:20.000000000 -05:00
+categories:
+- genomics
+tags:
+- 1000 Genomes
+- '454'
+- genomics
+- Illumina
+- informatics
+- SOLiD
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '2'
+  smwpff_settings: a:3:{s:4:"room";s:0:"";s:7:"excerpt";s:0:"";s:6:"images";s:0:"";}
+author:
+  login: dd
+  email: dooling@gmail.com
+  display_name: dd
+  first_name: David
+  last_name: Dooling
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>I have written a bit about the <a href="http://www.ncbi.nlm.nih.gov/Traces/sra/sra.cgi">NCBI Short Read Archive (SRA)</a>, <a href="/2008/05/short-read-archive.html">its internals</a>, and <a href="/2008/06/how-fast.html">data transfer rates</a>. Here is some information about the data format people are using to submit data from the massively parallel sequencers to the SRA. I apologize in advance for all the acronyms.</p>
+<p>The SRA is currently accepting 454 data in <a href="http://www.454.com/news-events/press-releases.asp?display=detail&id=48">standard flowgram format (SFF)</a> and Solexa in <a href="http://srf.sourceforge.net/">SRF</a> format.  Soon 454 and AB SOLiD will support the SRF format and submissions will commence in that format for those platforms.  The SFF format contains the flowgrams (intensity per cycle at each spot), base calls, and base quality values.  In other words, the SFF is very similar to the SCF format used for capillary sequencing data (except flowgrams are discrete whereas chromatograms are continuous).  Also, NCBI (as <a href="/2008/05/short-read-archive.html">recently discussed</a>) has developed their own storage format for massively parallel sequencing data that they will also be accepting as a submission format within the next few months.</p>
+<p>So what is an SRF? Well, it is basically just a container format, i.e., what you store in it is up to the implementation.  Thus far, SRF has only been implemented for Illumina/Solexa data; so the rest of this post is specific to that platform and the data types that its implementation of the SRF format contains. The Solexa SRF implementation was done largely by James Bonfield at <a href="http://www.sanger.ac.uk/">Sanger</a> and is distributed as part of the <a href="https://sourceforge.net/project/showfiles.php?group_id=100316&package_id=108243">io_lib</a> package (now distributed separately from the <a href="http://staden.sourceforge.net/">Staden package</a>).  I would imagine that the SOLiD implementation will be very similar to the Solexa implementation.  The 454 implementation will likely be very similar to the SFF already in wide use.</p>
+<p>For the <a href="http://www.1000genomes.org/">1000 Genomes</a> <a href="/2008/03/1000-genomes.html">pilot projects</a>, the 1000 Genomes Data Collection Center (DCC) is asking that we submit the "raw", "processed", and "base" data for each spot.  Raw data are the intensity values (int) and noise (nse) values.  Processed data are the processed intensity values (sig2) and four-channel quality values (prb).  Base data are the base calls (the quality value is gotten from the prb for the called base).  This results in about 50 bytes per base for the SRF. Compared to 2 bits per base, the minimum possible for DNA's four letter alphabet, this is a 200-fold increase.  So not only do these instruments generate a lot more data, we are storing more information per base now too.  The average submission for an Solexa run is about 100 GB.</p>
+<p>Why store all this extra information?  Essentially, people do not trust/believe the data at this point.  The quality values provided by these pipelines are not as reliable as those generated for capillary sequence data.  Some people want the raw data so that they can develop and improve base calling/quality algorithms. Clearly you would not need <em>all</em> the 1000 Genomes data to develop such algorithms (although the technology changes at such a rate that you would likely want some rolling subset of the latest runs). Others want the raw data because they think they may want to go back and re-analyze data when better algorithms become available. For a wide variety of reasons (disk space, computational cost, network bandwidth, keeping pace with newly generated data), I doubt any such massive re-analysis will ever take place.</p>

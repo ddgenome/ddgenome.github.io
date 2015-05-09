@@ -1,0 +1,26 @@
+---
+layout: post
+title: How fast?
+date: 2008-06-20 16:08:11.000000000 -05:00
+categories:
+- genomics
+tags:
+- 1000 Genomes
+- genomics
+- informatics
+- IT
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '2'
+author:
+  login: dd
+  email: dooling@gmail.com
+  display_name: dd
+  first_name: David
+  last_name: Dooling
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>In a recent <a href="/2008/05/short-read-archive.html">post</a>, I spoke about the data format that will be used by the <a href="http://www.ncbi.nlm.nih.gov/Traces/sra/sra.cgi">NCBI Short Read Archive (SRA)</a>, but storing the data is only part of the problem. You also need to get the data <em>to</em> the SRA. At the 1000 Genomes Steering Committee meeting last month, we got some idea of the number of massively parallel sequencers currently in use at the large sequencing centers around the world. There are about 100 Illumina Genome Analyzers or Genome Analyzer II's in use at the large sequencing centers (actually there is a few more than that, but we'll use round numbers for this exercise). Each of these sequencers generates about 100 GB of <a href="http://srf.sourceforge.net/">SRF</a> files every week or so. If all of the runs on these machines were submitted to the SRA, NCBI would need about 135 Mbps of bandwidth just for these instruments. Assuming the 454 SRF files will be about the same size as the 454 SFF files, you would need about 25 Mbps for the approximately 40 454 machines each generating about 3 GB of SRF files per run. Add to that the roughly 15 Mbps for the ten SOLiD instruments, and you end up with a total bandwidth of about 175 Mbps continuously dedicated to just the data coming in to the SRA. If Sen. Ted Stevens (R-Alaska) were here to comment on this, he'd say that NCBI is going to need a <a href="http://www.youtube.com/watch?v=5ir_mKso_qc">bigger tube</a>.</p>

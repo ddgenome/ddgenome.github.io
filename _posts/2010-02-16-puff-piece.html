@@ -1,0 +1,36 @@
+---
+layout: post
+title: Puff piece
+date: 2010-02-16 17:19:24.000000000 -06:00
+categories:
+- genomics
+- IT
+tags:
+- cloud
+- genomics
+- informatics
+- IT
+- software
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '2'
+author:
+  login: dd
+  email: dooling@gmail.com
+  display_name: dd
+  first_name: David
+  last_name: Dooling
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>Why should one be skeptical of all the information touting the wonders of cloud computing? This older, in-depth piece by Gartner, <a href="http://www.gartner.com/technology/media-products/reprints/bmc/article12/article12.html">Hype Cycle for Cloud Computing, 2009</a>, lays out the reasons pretty well. But one need not spend that much time reading about it. You can simply read this much shorter piece by Jason Stowe: <a href="http://www.lifescienceleader.com/index.php?option=com_jambozine&layout=article&view=page&aid=3973">Is the Future Of High- Performance Computing For Life Sciences Cloudy?</a> Reading that story, one can only get the impression that the cloud is some panacea where all computational problems are solved. In fact, the picture is so rosy that one may become suspicious. So suspicious that one may read the <em>About the Author</em> section at the bottom of the piece an see that Mr. Stowe happens to be CEO of a company selling cloud computing services.<br />
+<blockquote>Jason Stowe is the founder and CEO of Cycle Computing, a provider of high-performance computing (HPC) and open source technology in the cloud. A seasoned entrepreneur and experienced technologist, Jason attended Carnegie Mellon and Cornell Universities.</p></blockquote>
+<p> No wonder he makes cloud computing sound so attractive. No mention of the IT expertise needed to get up and running on the cloud. No mention of the software engineering needed to ensure your programs run efficiently on the cloud. It may not be apparent from his article, but a program that runs well on one or ten computers does not necessarily run well on hundreds of computers. In fact, he implies the exact opposite.<br />
+<blockquote>For compute clusters as a service, the math is different: Having 40 processors work for 100 hours costs the same as having 1,000 processors run for 4 hours.</p></blockquote>
+<p> It may cost the same under that scenario, but not everything scales linearly. In fact, most things don't and that less-than-linear scaling actually ends up making it cost <em>more</em> to get a shorter turnaround. This fact was clearly evident in the <a href="http://genomebiology.com/2009/10/11/R134">Crossbow paper</a> where it cost $52 to complete the analysis in 6.5 hours but $84 to finish it under 3 hours (Table 4). The article fails to mention this; a marvel given the fact that the lack of good, scalable bioinformatics tools that can run well in highly parallel environments is perhaps the largest impediment to the adoption cloud computing in bioinformatics. Of course, I am sure he will gladly sell you consulting services that will get you up and running on the cloud. In short, this looks like a shill.</p>
+<p>Unfortunately, omitting information is not the only problem with many of the stories about cloud computing; many also contain misinformation. For example, the story <a href="http://www.nature.com/nbt/journal/v28/n1/full/nbt0110-1.html">Gathering clouds and a sequencing storm</a> in Nature Biotechnology mentions the software engineering challenges but erroneously states<br />
+<blockquote>&hellip;bioinformaticians might not be willing to spend the time to familiarize themselves with hadoop, the open source program needed to process large data sets on a cloud</p></blockquote>
+<p> What?!? You do not <em>have</em> to develop tools using <a href="http://hadoop.apache.org/">Hadoop</a>. Sure it is a nice platform that provides fault-tolerant parallelism, but it is by no means required by any cloud provider that I know of (not even Google, whose MapReduce framework provided the model for Hadoop!) nor is it the only way to achieve parallel processing (far from it). Amazon EC2 just provides you with a virtual machine with a basic operating system installed on it and remote access. You can do whatever you want with it after that. Google and Microsoft do require that you develop your code in their cloud framework, but you do not have to use Hadoop. For information on what you <em>do</em> have to do to run jobs on the major cloud providers, check out this article by Udayan Banerjee, <a href="http://cloudcomputing.sys-con.com/node/1257999">Cloud Economics &mdash; Amazon, Microsoft, Google Compared</a>, and each providers web site: <a href="http://aws.amazon.com/">Amazon AWS</a>, <a href="http://code.google.com/appengine/">Google App Engine</a>, and <a href="http://www.microsoft.com/windowsazure/windowsazure/">Microsoft Windows Azure</a>.</p>
+<p><em>(How many bad cloud puns can I work into post titles? Stay tuned.)</em></p>

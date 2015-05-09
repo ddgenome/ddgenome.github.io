@@ -1,0 +1,46 @@
+---
+layout: post
+title: Illumina cluster needs
+date: 2009-06-18 11:13:36.000000000 -05:00
+categories:
+- genomics
+- IT
+tags:
+- compute
+- FLOSS
+- genomics
+- Illumina
+- IT
+- LSF
+- software
+status: publish
+type: post
+published: true
+meta:
+  _edit_last: '2'
+author:
+  login: dd
+  email: dooling@gmail.com
+  display_name: dd
+  first_name: David
+  last_name: Dooling
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>There is an interesting thread over at the <a href="http://groups.google.com/group/solexa?hl=en">Solexa Google Group</a> about the <a href="http://groups.google.com/group/solexa/browse_thread/thread/38ff88dcf5f5df17?hl=en">IT infrastructure needed to support an Illumina Genome Analyzer (GA)</a>. The discussion focuses mostly on the cluster and, to a lesser extent, the storage and network required to operate the instrument and generate sequence data (primary analysis). At <a href="http://genome.wustl.edu/">The Genome Center</a>, we use Platform LSF HPC as our batch scheduler and currently use <a href="/2008/03/illumina-genome-analyzer-pipeline-and.html">lsgmake-gap</a> to execute the GAPipeline (the Illumina primary analysis software) in parallel on our cluster. However, GAPipeline is developed and tested by Illumina on a cluster managed by <a href="http://www.sun.com/software/sge/">Sun Grid Engine (SGE)</a>, which is <a href="http://gridengine.sunsource.net/">free/open source software</a>. This situation creates some headaches for us because as the internals of GAPipeline change, we need to <a href="/2009/02/lsgmake-gap-for-gapipeline-13.html">regularly update lsgmake-gap</a> so that GAPipeline will continue to run properly on our cluster. Several years ago when we migrated to LSF, the driving force for the selection of LSF was that it was the only batch scheduler that could handle scheduling 50,000+ jobs at a time (a regular occurrence on our cluster). Fortunately, users may no longer have to choose between scalability and ease of use when running GAPipeline as part of their larger computational needs. Chris Dagdigian, who writes the <a href="http://gridengine.info/">gridengine.info blog</a>, had this information about the current capabilities of SGE.</p>
+<blockquote><ol>
+<li>SGE 6.2 design goal includes supporting a single array job with 500,000 tasks and hundreds of thousands of concurrent jobs</li>
+<li>People have been running hundreds of thousands of SGE jobs per week since the SGE 5.3 days many years ago
+</li>
+<li>I personally know of several sites pushing hundreds of thousands of heavy SGE jobs per week through their systems right now
+</li>
+<li>SGE 6.2 runs a 62,000 core cluster in Texas (RANGER) and has been for some time</li>
+</ol>
+<p>"tens of thousands of jobs" is actually pretty easy with Grid Engine and has been for some time, scaling issues encountered in this range have more to do with bad spooling decisions, filesystem design and occasionally an overwhelmed qmaster host. The developers have worked quite a bit this year to improve threading performance, reduce memory footprints and remove things like external RSH methods that consumed system resources like filehandles and TCP ports etc.</p>
+<p>This is especially evident in the SGE 6.2  and 6.2u1 release series where speed and scaling were specifically addressed as part of the design effort (6.2u3 and 6.3 will introduce new features). This is the reason why the <em>SGE scheduler is now a thread within the qmaster</em> - one of the more obvious user-visible changes made recently. (emphasis mine - dd)</p>
+<p>There are many reasons why one would chose between LSF vs SGE (I have used both for years now) but scaling is not one of the significant selection factors. Features, price, APIs and quality of documentation are far more important along with community adoption/support.</p>
+</blockquote>
+<p>I would guess breaking out the scheduler into its own thread is a major factor in SGE's ability to manage so many jobs. This was the major deficiency of SGE and other batch schedulers we tested at the time. Several systems designed their schedulers to automatically run through the list of jobs a certain intervals. With a lot of jobs in the queue, the scheduler would not finish its previous traversal before the new one was scheduled to start. Depending on the design implementation this meant that either the original scheduling was killed and the scheduler never processed some jobs or that scheduler threads kept spawning until the resources were exhausted on the master node (that's bad).</p>
+<p>(A couple asides here, since GAPipeline is built on Makefile's, another option that came up in the thread was parallel execution across an LSF cluster using <a href="http://distmake.sourceforge.net/pmwiki/pmwiki.php">distmake</a>. Because of <a href="http://hpcinfo.com/">our interest</a> in <a href="http://www.opensciencegrid.org/">grid computing</a>, we are currently investigating replacing LSF with <a href="http://www.cs.wisc.edu/condor/">Condor</a>.)</p>
+<p>Of course, with the roll out of SCS2.4 with RTA (real-time analysis), most of the primary analysis is now done on the instrument control computer. Thus, all of this talk about the requirements to produce sequence from the machine are made much less important. Now there is only one stage of the pipeline, the alignment and reporting (called GERALD), now run off the instrument computer. The most computationally intensive part of this stage of the pipeline is the alignment (ELAND and its post-processing) and it can only be made parallel on a per lane basis, i.e., eight ways.</p>
+<p>Of course, there is also the specter of the requirements for sequence analysis at Illumina GA IIx scale, but that's a whole other post&hellip;</p>

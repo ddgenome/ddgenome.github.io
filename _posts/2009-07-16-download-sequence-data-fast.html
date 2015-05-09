@@ -1,0 +1,39 @@
+---
+layout: post
+title: Download sequence data fast
+date: 2009-07-16 16:22:47.000000000 -05:00
+categories:
+- genomics
+- IT
+tags:
+- FLOSS
+- genomics
+- informatics
+- IT
+status: publish
+type: post
+published: true
+meta:
+  smwpff_settings: a:3:{s:4:"room";s:2:"-1";s:7:"excerpt";s:0:"";s:6:"images";s:0:"";}
+  _edit_last: '2'
+author:
+  login: dd
+  email: dooling@gmail.com
+  display_name: dd
+  first_name: David
+  last_name: Dooling
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p><a href="http://www.asperasoft.com/download/sw/connect/AsperaConnect"><img alt="" src="assets/icon_connect.png" title="Aspera Connect" class="alignright" width="76" height="70" /></a></p>
+<p>More and more data are being submitted to the <a href="http://www.ncbi.nlm.nih.gov/Traces/sra/sra.cgi">NCBI Short Read Archive (SRA)</a>. So you may ask yourself, "How am I going to download all that data?" Well, as luck would have it, you can download it using the same high-speed network protocol that we use to upload it, <a href="http://www.asperasoft.com/">Aspera</a>. You can <a href="http://www.asperasoft.com/download/sw/connect/AsperaConnect">download the Aspera Connect browser plugin</a> (it is offered at not cost, but sadly is not <a href="http://www.gnu.org/philosophy/free-sw.html">free</a>), install it, and then begin downloading data at near line speed in no time. Of course, if your line speed is not so hot, Aspera cannot help you much.</p>
+<p>In a previous post, I mentioned some of the <a href="/2008/05/n-genomes.html">difficulties in using the Aspera scp client</a>. The president of Aspera, Michelle Munson, posted a <a href="/2008/05/n-genomes.html#comment-9839">good retort to my musings</a>, which I reproduce below for ease of viewing. Basically, to avoid problems, don't allow Aspera scp to transfer data faster than your system can provide it. If you do so, I can report that Aspera scp behaves quite reliably (and still speedily). Well, except for the time NCBI overrode <em>on the server side</em> the bandwidth limit we set <em>on the client side</em>, increasing it beyond what the back-end disk systems were happy with. After contacting NCBI, we were told they wouldn't do that any more.</p>
+<p>Here is Ms. Munson's comment.</p>
+<blockquote><p>Hello all,</p>
+<p>On the use of Aspera Scp, the stalling behavior described is a result of artificially induced heavy packet loss for the FASP protocol, usually due to setting a target transfer rate that significantly exceeds the throughput to the storage system on the receiver side. The other cause is bandwidth shaping/artificial dropping of UDP traffic along the transmission path.</p>
+<p>The Aspera transfer logs (routed to syslog on Unix systems) have detailed statistics that we can interpret for you which will indicate the root cause.</p>
+<p>Assuming that the receiver side I/O throughput is overdriven, you can verify this for yourselves by running a 3rd party disk benchmarking utility such as bonnie++. Use bonnie to measure the write throughput for blocks of 64K and 1 MB (Aspera software uses a configurable block size, 64K by default).</p>
+<p>Once you know the disk throughput bottleneck, you can either set a target rate that does not exceed, or better yet, as of our 2.2 release (available as of April 2009) you can configure on the storage rate control option, which will automatically adapt the transmission rate to the storage throughput. This is much like network congestion control extended to the storage systems (a patent-pending innovation by our company).</p>
+<p>If you have any questions or problems on the above, be glad to help over here at Aspera. You can reach us at <a href="mailto:support@asperasoft.com">support@asperasoft.com</a> or email me directly, <a href="mailto:michelle@asperasoft.com">michelle@asperasoft.com</a>.</p>
+<p>Thank you,<br />Michelle Munson<br />President, Aspera, Inc.</p>
+</blockquote>

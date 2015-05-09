@@ -1,0 +1,1191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" __expr-val-dir="ltr" lang="en-us" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="Expires" content="0" /><meta http-equiv="X-UA-Compatible" content="IE=8" />
+	
+	
+
+	<!-- robots -->
+	
+
+	<!-- page title - overridden by asp:content on pages or page layouts -->
+	<title>
+	
+Medicine &amp; Healthcare	
+
+| Newsroom | Washington 
+
+
+University in St. Louis
+
+</title>
+	
+	<!-- favicon -->
+	<link rel="shortcut icon" href="/Style Library/sitename/favicon.ico" type="image/vnd.microsoft.icon" />
+	<!--<link rel="stylesheet" type="text/css" href="/Style%20Library/en-US/Themable/Core%20Styles/controls.css"/>
+<link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/Themable/search.css?rev=T%2Bhraxktc1A8EnaG5gGMHQ%3D%3D"/>
+<link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/Themable/corev4.css?rev=p63%2BuzTeSJc22nVGNZ5zwg%3D%3D"/>
+
+	 all OOTB css -->
+		<link rel="stylesheet" type="text/css" href="/Style%20Library/en-US/Themable/Core%20Styles/controls.css"/>
+<link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/Themable/search.css?rev=T%2Bhraxktc1A8EnaG5gGMHQ%3D%3D"/>
+<link rel="stylesheet" type="text/css" href="/_layouts/1033/styles/Themable/corev4.css?rev=p63%2BuzTeSJc22nVGNZ5zwg%3D%3D"/>
+
+	<!-- page manager interacts with script and the sharepoint object model -->
+	
+	
+	<!-- unified logging service -->
+	
+	
+	<!-- identifies to scripting elements that this is a v4 master page. required for scrolling? -->
+	<script type="text/javascript">
+	  var _fV4UI = true;
+	  var _isEditMode = false;
+	  
+	</script>
+	
+	<!--<script type="text/javascript"  src="/_layouts/1033/init.js?rev=VhAxGc3rkK79RM90tibDzw%3D%3D"></script>-->
+<script type="text/javascript" src="/JS/jsprettify-all-latest.js"></script> <script type="text/javascript">window.jsprettify.run(); </script> 
+	<script src="/JS/jquery-1.4.2.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/JS/youTubeEmbed.js"></script>
+	<script type="text/javascript" src="/JS/audioEmbed.js"></script>
+	
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#s4-bodyContainer a[href*='http']:not([href*='" + window.location.hostname + "'])").attr("target","_blank");
+    });
+</script>
+
+
+<!--<script type="text/javascript" src="/lightbox/js/lightbox.js"></script>
+<link rel="stylesheet" href="/lightbox/css/lightbox.css" type="text/css" media="screen" />-->
+<script type="text/javascript">
+//Let's attach to the jQuery document.Ready() function
+$(document).ready(function() {
+
+	//Fix photo captions
+	//var pcr = $.trim($('.primaryImagephotoCredit').html());
+	//var pca = $.trim($('.primaryImagephotocaption').html());
+	//if(pcr == '')
+	//{
+		//$('.primaryImagephotoCredit').css("display","none");
+	//}
+	//if(pca == '')
+	//{
+		//$('.primaryImagephotocaption').css("display","none");
+	//}
+
+	//Now, let's fix those line breaks
+	//$('.bodyWrapper').html($('.bodyWrapper').html().replace(/&lt;br/g,'<br/>'));
+	//$('.bodyWrapper').html($('.bodyWrapper').html().replace(/\/&gt;/g,''));
+	$('a:link img').parent().css('border-bottom', 'none');
+	});
+</script>
+
+
+	
+	<!-- load SharePoint javascript -->
+	<script type="text/javascript">
+// <![CDATA[
+document.write('<script type="text/javascript" src="/_layouts/1033/init.js?rev=lEi61hsCxcBAfvfQNZA%2FsQ%3D%3D"></' + 'script>');
+document.write('<script type="text/javascript" src="/_layouts/wustl.sharepoint.customribbonactions/ribbonactions.js?rev=hLYeZz7A8dTDSkPTGfys8g%3D%3D"></' + 'script>');
+document.write('<script type="text/javascript" src="/_layouts/newsroomribbonactions/ribbonactions.js?rev=yEqIMMVItwfyWb3U04zv6Q%3D%3D"></' + 'script>');
+document.write('<script type="text/javascript" src="/ScriptResource.axd?d=YUlu-CLyYFsg-h6oGG87PAJVDwSpxCpiY8ZwhRPFGQwotzSwujh0KIJslkSnqReX-sK3i7P2rp8NvnIwaecGTX5PiJPMSkEI2O5WcA7HRj6QuukxnI1jyRU8fl_ZoBuBCs1b2ZtwBpqbQZrBK0GbbaFawFM1&amp;t=2e2045e2"></' + 'script>');
+document.write('<script type="text/javascript" src="/_layouts/blank.js?rev=QGOYAJlouiWgFRlhHVlMKA%3D%3D"></' + 'script>');
+// ]]>
+</script>
+
+ 
+ 	<style type="text/css">
+		/* fix scrolling on list pages */
+		#s4-bodyContainer {
+			position: relative;
+		}
+
+		/* hide body scrolling (SharePoint will handle) */
+		body {
+			height:100%;
+			overflow:hidden;
+			width:100%;
+		}
+				
+		/* popout breadcrumb menu needs background color for firefox */
+		.s4-breadcrumb-menu {
+			background:#F2F2F2;
+		}
+
+		/* if you want to change the left nav width, change this and the margin-left in .s4-ca */
+		body #s4-leftpanel {
+			/* width:155px; */
+		}
+		
+		/* body area normally has a white background */
+		.s4-ca {
+			background:transparent none repeat scroll 0 0;
+			width:865px;
+      		margin:0 auto;
+			/* margin-left:155px; */
+		}
+		.wrapper
+		{
+			overflow-x:visible !important;
+			overflow-y:visible !important;
+		}	
+		/*Hide Unused Ribbon Actions*/
+		
+#Ribbon\.EditingTools\.CPEditTab\.Font\.FontSize {
+	display:none;
+}
+#Ribbon\.EditingTools\.CPEditTab\.Font\.FontSize-Medium{
+	display:none;
+}
+#Ribbon\.EditingTools\.CPEditTab\.Font\.Fonts-Medium{
+	display:none;
+}
+
+#Ribbon\.EditingTools\.CPEditTab\.Font\.Fonts {
+	display:none;
+}
+
+
+#Ribbon\.EditingTools\.CPEditTab\.Markup-LargeMedium-1-0 {
+	display:none;
+}
+ #WUSTL\.SharePoint\.Newsroom\.RTEActions\.AdditionalGroup.Line-Large {
+	
+	display:none;
+}
+#Ribbon\.EditingTools\.CPInsert\.Media\.Image-Large {
+	display:none;
+}
+
+#Ribbon\.EditingTools\.CPInsert\.Media\.Media-Large {
+	display:none;
+}
+#Ribbon\.EditingTools\.CPInsert\.WebParts {
+	display:none;
+}
+#Ribbon\.EditingTools\.CPEditTab\.Clipboard\.Paste-Large {
+	
+	display:none;
+}
+#Ribbon\.EditingTools\.CPEditTab\.Font\.FontBackgroundColor-Small {
+	display:none;
+}
+
+#Ribbon\.EditingTools\.CPEditTab\.Font\.FontColor-Small {
+	display:none;
+}
+
+	</style>
+ 
+	<link rel="stylesheet" type="text/css" href="/Style Library/en-us/Core Styles/siteMain.css" />
+	<!--[if IE]>
+		<link rel="stylesheet" type="text/css" href="/Style Library/en-us/Core Styles/styles4IE.css" />
+	<![endif]-->
+	<style type="text/css">
+		.wrapper {
+		 overflow:hidden;
+		}
+		.mainBottom {
+			background-color:#FFF;
+			overflow:hidden;
+		}
+		li.storyItem a {
+			font-size:14px;
+		}
+		
+	</style>
+	
+	<!-- javascript to override the active-x message in ie 
+		// See http://blog.drisgill.com/2010/02/removing-name-activex-control-warning.html for more info
+		// Remove if the IM pressence icons are needed in SharePoint
+	-->
+	<script type="text/javascript">
+	  function ProcessImn() { }
+	  function ProcessImnMarkers() { }	
+	</script>
+	
+	<!-- additional header delegate control -->
+	
+	
+	<!-- additional header placeholder - overridden by asp:content on pages or page layouts -->
+	
+<style type="text/css">
+.mainTop {
+	background:url("/cssimages/threecolumnWide.gif") repeat-y;
+	float:left;
+}
+.rightColumn,.spiffBox  {
+	width:225px;
+}
+.spiffContent{
+	width:210px;
+}
+.mainTop .middleColumn {
+	width:510px;
+}
+
+.mainbody {
+	width: 470px;
+}
+
+td.ms-sbgo
+{
+background-color: transparent;
+padding:0 0 0 5px;
+border:none;
+}
+.ms-sbplain {
+font-family:Tahoma;
+font-size:8pt;
+border:1px solid #000000;
+height:20px;
+}
+
+
+.mainBottom {
+	display:none;
+}
+
+.ms-WPBody a:link, .ms-WPBody a:visited 
+{
+color: #000000;
+text-decoration: none;
+}
+
+.ms-WPBody a:hover 
+{
+color: #000000;
+text-decoration: none;
+}
+
+
+.rightColumn .ms-WPTitle {
+font-weight: bold;
+font-family: "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+color: #a32a31;
+padding-left: 3px;
+padding-right: 7px;
+padding-top: 2px;
+padding-bottom: 2px;
+font-size: 13px;
+}
+
+.ms-WPHeader td {
+	border-bottom:none;
+}
+
+</style>
+	
+
+	<!-- microsoft says these should always be inside the head tag. -->
+  <link rel="shortcut icon" href="/cssimages/favicon.ico" type="image/x-icon" /> 
+	<script src="/css_browser_selector.js" type="text/javascript"></script>
+	<style type="text/css">
+	#contentContainer {
+	min-height: 233px;
+}
+
+@media print {
+.clearIt {
+	clear:both;
+	overflow:hidden;
+}
+
+#designModeContainer{
+	padding: 0px;
+}
+
+.siteActionMenu
+{
+	float:right;
+	padding:0;
+	margin:0;
+	
+}
+.sharepointLogin
+{
+	float:right;
+	display:inline;
+}
+
+.console
+{
+	clear:both;
+}
+
+td.ms-sbgo
+{
+background-color: transparent;
+padding:0 0 0 5px;
+border:none;
+}
+.ms-sbplain {
+font-family:Tahoma;
+font-size:8pt;
+border:1px solid #000000;
+height:20px;
+}
+
+td.ms-sbcell, td.ms-sbgo img, .s4-search .srch-gosearchimg  {
+ border:none;
+}
+
+.gecko .searchbox {
+padding-left:10px;
+}
+
+.footer .ms-WPBody a:link, .footer .ms-WPBody a:visited 
+{
+color: #000000;
+text-decoration: none;
+font-size:50%;
+}
+
+.footer .ms-WPBody a:hover 
+{
+color: #000000;
+text-decoration: none;
+}
+
+/* Increase the width of the Site Actions menu to remove horizontal scroll bars*/
+div.ms-MenuUIPopupScreen div.ms-MenuUIPopupInner div.ms-MenuUILarge,div.ms-MenuUIPopupScreen div.ms-MenuUIPopupInner div.ms-MenuUILargeRtL
+{
+width:270px;
+}
+
+</style>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-7722459-24']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!-- Script to allow fixed positioning of Ribbon without obscuring site elements
+	Gets the hight of the Ribbon and adds that height as top padding to the main content -->
+	<script type="text/javascript">
+//set top padding of the workspace to the height of the ribbon
+function setTopPadding() {
+	   
+	var wrkElem = document.getElementById('s4-workspace');
+	var ribHeight = document.getElementById('topfixedcontentarea').offsetHeight;
+
+	if (window.location.search.match("[?&]IsDlg=1")) {
+		//margin works better for dialogs b/c of scrollbars
+	    wrkElem.style.marginTop = ribHeight + 'px';
+	    wrkElem.style.paddingTop = '0px';
+	}
+	   else {
+	     //padding works better for the main window
+	     wrkElem.style.paddingTop = ribHeight + 'px';
+	   }
+	}
+	 
+	// bind top padding reset to ribbon resize event so that the page always lays out correctly.
+	ExecuteOrDelayUntilScriptLoaded(function () { SP.UI.Workspace.add_resized(setTopPadding); }, "init.js");
+	
+	$(document).ready(function(){
+ setInterval(setTopPadding, 300);
+ });
+</script>
+<script type="text/javascript">
+/*$("document").ready(function() {
+	var links = $("a");
+	links.each(function() {
+		var currentURL = $(this).attr("href");
+		var newURL = currentURL.replace("P","p");
+		$(this).attr("href",newURL);
+	});
+});*/
+</script>
+<style type="text/css">
+	.s4-skipribbonshortcut { display:none; }
+
+</style></head>
+
+<body onload="javascript:if (typeof(_spBodyOnLoadWrapper) != 'undefined') _spBodyOnLoadWrapper(); if (typeof(primaryImageSizer) != 'undefined') primaryImageSizer();"> 
+
+
+<form name="aspnetForm" method="post" action="MedicineHealthcare.aspx" id="aspnetForm">
+<input type="hidden" name="MSOWebPartPage_PostbackSource" id="MSOWebPartPage_PostbackSource" value="" />
+<input type="hidden" name="MSOTlPn_SelectedWpId" id="MSOTlPn_SelectedWpId" value="" />
+<input type="hidden" name="MSOTlPn_View" id="MSOTlPn_View" value="0" />
+<input type="hidden" name="MSOTlPn_ShowSettings" id="MSOTlPn_ShowSettings" value="False" />
+<input type="hidden" name="MSOGallery_SelectedLibrary" id="MSOGallery_SelectedLibrary" value="" />
+<input type="hidden" name="MSOGallery_FilterString" id="MSOGallery_FilterString" value="" />
+<input type="hidden" name="MSOTlPn_Button" id="MSOTlPn_Button" value="none" />
+<input type="hidden" name="__REQUESTDIGEST" id="__REQUESTDIGEST" value="InvalidFormDigest" />
+<input type="hidden" name="MSOSPWebPartManager_DisplayModeName" id="MSOSPWebPartManager_DisplayModeName" value="Browse" />
+<input type="hidden" name="MSOSPWebPartManager_ExitingDesignMode" id="MSOSPWebPartManager_ExitingDesignMode" value="false" />
+<input type="hidden" name="MSOWebPartPage_Shared" id="MSOWebPartPage_Shared" value="" />
+<input type="hidden" name="MSOLayout_LayoutChanges" id="MSOLayout_LayoutChanges" value="" />
+<input type="hidden" name="MSOLayout_InDesignMode" id="MSOLayout_InDesignMode" value="" />
+<input type="hidden" name="_wpSelected" id="_wpSelected" value="" />
+<input type="hidden" name="_wzSelected" id="_wzSelected" value="" />
+<input type="hidden" name="MSOSPWebPartManager_OldDisplayModeName" id="MSOSPWebPartManager_OldDisplayModeName" value="Browse" />
+<input type="hidden" name="MSOSPWebPartManager_StartWebPartEditingName" id="MSOSPWebPartManager_StartWebPartEditingName" value="false" />
+<input type="hidden" name="MSOSPWebPartManager_EndWebPartEditing" id="MSOSPWebPartManager_EndWebPartEditing" value="false" />
+<input type="hidden" name="_maintainWorkspaceScrollPosition" id="_maintainWorkspaceScrollPosition" value="0" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUBMA9kFgJmD2QWAgIBD2QWBGYPZBYCAggPZBYCZg9kFgICAQ8WAh4TUHJldmlvdXNDb250cm9sTW9kZQspiAFNaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJDb250cm9scy5TUENvbnRyb2xNb2RlLCBNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljAWQCAg9kFggCAw9kFgIFJmdfZTEwODgwOWNfODlkYl80NzY3XzlkNTRfMTRjMjdhYzFlNmI4Dw8WBB4LUGFyYW1WYWx1ZXMyhwUAAQAAAP////8BAAAAAAAAAAwCAAAAWE1pY3Jvc29mdC5TaGFyZVBvaW50LCBWZXJzaW9uPTE0LjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPTcxZTliY2UxMTFlOTQyOWMFAQAAAD1NaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJQYXJ0UGFnZXMuUGFyYW1ldGVyTmFtZVZhbHVlSGFzaHRhYmxlAQAAAAVfY29sbAMcU3lzdGVtLkNvbGxlY3Rpb25zLkhhc2h0YWJsZQIAAAAJAwAAAAQDAAAAHFN5c3RlbS5Db2xsZWN0aW9ucy5IYXNodGFibGUHAAAACkxvYWRGYWN0b3IHVmVyc2lvbghDb21wYXJlchBIYXNoQ29kZVByb3ZpZGVyCEhhc2hTaXplBEtleXMGVmFsdWVzAAADAwAFBQsIHFN5c3RlbS5Db2xsZWN0aW9ucy5JQ29tcGFyZXIkU3lzdGVtLkNvbGxlY3Rpb25zLklIYXNoQ29kZVByb3ZpZGVyCOxROD8KAAAACgoLAAAACQQAAAAJBQAAABAEAAAABgAAAAYGAAAABlVzZXJJRAYHAAAABkxpc3RJRAYIAAAACkZpbHRlckxpbmsGCQAAAAVUb2RheQYKAAAABldlYlVSTAYLAAAAEWR2dF9zdGFydHBvc2l0aW9uEAUAAAAGAAAABgwAAAAPQ3VycmVudFVzZXJOYW1lBg0AAAAme0ZDM0ZCM0Q1LUQ4NEMtNDNERS1CMDk0LTA0NTk0MTVGMTNDOH0GDgAAAAE/Bg8AAAAUMjAxNS0wNS0wOFQwOToxNzo1N1oGEAAAAAEvBhEAAAAACx4QRmlsdGVyT3BlcmF0aW9uczKNBQABAAAA/////wEAAAAAAAAABAEAAACTAlN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkRpY3Rpb25hcnlgMltbU3lzdGVtLlN0cmluZywgbXNjb3JsaWIsIFZlcnNpb249Mi4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XSxbTWljcm9zb2Z0LlNoYXJlUG9pbnQuV2ViUGFydFBhZ2VzLkZpbHRlck9wZXJhdGlvbiwgTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5Y11dAwAAAAdWZXJzaW9uCENvbXBhcmVyCEhhc2hTaXplAAMACJIBU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuR2VuZXJpY0VxdWFsaXR5Q29tcGFyZXJgMVtbU3lzdGVtLlN0cmluZywgbXNjb3JsaWIsIFZlcnNpb249Mi4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5XV0IAAAAAAkCAAAAAAAAAAQCAAAAkgFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5HZW5lcmljRXF1YWxpdHlDb21wYXJlcmAxW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQAAAAALZGQCBw9kFgRmD2QWBAIBDxYCHgdWaXNpYmxlaBYCZg9kFgQCAg9kFgYCAQ8WAh8DaGQCAw8WCB4TQ2xpZW50T25DbGlja1NjcmlwdAVyamF2YVNjcmlwdDpDb3JlSW52b2tlKCdUYWtlT2ZmbGluZVRvQ2xpZW50UmVhbCcsMSwgNTMsICdodHRwczpcdTAwMmZcdTAwMmZuZXdzLnd1c3RsLmVkdVx1MDAyZm1oJywgLTEsIC0xLCAnJywgJycpHhhDbGllbnRPbkNsaWNrTmF2aWdhdGVVcmxkHihDbGllbnRPbkNsaWNrU2NyaXB0Q29udGFpbmluZ1ByZWZpeGVkVXJsZB4MSGlkZGVuU2NyaXB0BSJUYWtlT2ZmbGluZURpc2FibGVkKDEsIDUzLCAtMSwgLTEpZAIFDxYCHwNoZAIDDw8WCh4JQWNjZXNzS2V5BQEvHg9BcnJvd0ltYWdlV2lkdGgCBR4QQXJyb3dJbWFnZUhlaWdodAIDHhFBcnJvd0ltYWdlT2Zmc2V0WGYeEUFycm93SW1hZ2VPZmZzZXRZAusDZGQCAw9kFgICAQ9kFgICAw9kFgICAQ88KwAFAQAPFgIeD1NpdGVNYXBQcm92aWRlcgURU1BTaXRlTWFwUHJvdmlkZXJkZAIBD2QWBgIFD2QWAgIBDxAWAh8DaGQUKwEAZAIHD2QWAmYPZBYCZg8UKwADZGRkZAIJDw8WAh8DaGRkAg8PZBYIAgIPZBYCZg8PZBYGHgVjbGFzcwUibXMtc2J0YWJsZSBtcy1zYnRhYmxlLWV4IHM0LXNlYXJjaB4LY2VsbHBhZGRpbmcFATAeC2NlbGxzcGFjaW5nBQEwZAIID2QWBAIBDxYCHwALKwQBZAIDDxYCHwALKwQBZAIKD2QWAgIFDxYCHwALKwQBZAIODw8WBB8CMo0FAAEAAAD/////AQAAAAAAAAAEAQAAAJMCU3lzdGVtLkNvbGxlY3Rpb25zLkdlbmVyaWMuRGljdGlvbmFyeWAyW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldLFtNaWNyb3NvZnQuU2hhcmVQb2ludC5XZWJQYXJ0UGFnZXMuRmlsdGVyT3BlcmF0aW9uLCBNaWNyb3NvZnQuU2hhcmVQb2ludCwgVmVyc2lvbj0xNC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNLZXlUb2tlbj03MWU5YmNlMTExZTk0MjljXV0DAAAAB1ZlcnNpb24IQ29tcGFyZXIISGFzaFNpemUAAwAIkgFTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYy5HZW5lcmljRXF1YWxpdHlDb21wYXJlcmAxW1tTeXN0ZW0uU3RyaW5nLCBtc2NvcmxpYiwgVmVyc2lvbj0yLjAuMC4wLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODldXQgAAAAACQIAAAAAAAAABAIAAACSAVN5c3RlbS5Db2xsZWN0aW9ucy5HZW5lcmljLkdlbmVyaWNFcXVhbGl0eUNvbXBhcmVyYDFbW1N5c3RlbS5TdHJpbmcsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OV1dAAAAAAsfATLZAwABAAAA/////wEAAAAAAAAADAIAAABYTWljcm9zb2Z0LlNoYXJlUG9pbnQsIFZlcnNpb249MTQuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49NzFlOWJjZTExMWU5NDI5YwUBAAAAPU1pY3Jvc29mdC5TaGFyZVBvaW50LldlYlBhcnRQYWdlcy5QYXJhbWV0ZXJOYW1lVmFsdWVIYXNodGFibGUBAAAABV9jb2xsAxxTeXN0ZW0uQ29sbGVjdGlvbnMuSGFzaHRhYmxlAgAAAAkDAAAABAMAAAAcU3lzdGVtLkNvbGxlY3Rpb25zLkhhc2h0YWJsZQcAAAAKTG9hZEZhY3RvcgdWZXJzaW9uCENvbXBhcmVyEEhhc2hDb2RlUHJvdmlkZXIISGFzaFNpemUES2V5cwZWYWx1ZXMAAAMDAAUFCwgcU3lzdGVtLkNvbGxlY3Rpb25zLklDb21wYXJlciRTeXN0ZW0uQ29sbGVjdGlvbnMuSUhhc2hDb2RlUHJvdmlkZXII7FE4PwIAAAAKCgsAAAAJBAAAAAkFAAAAEAQAAAABAAAABgYAAAAKRmlsdGVyTGluaxAFAAAAAQAAAAYHAAAAAT8LZGQCEw9kFgICAQ9kFgJmD2QWAgIDD2QWAgIFDw8WBB4GSGVpZ2h0GwAAAAAAAHlAAQAAAB4EXyFTQgKAAWQWAgIBDzwrAAkBAA8WBB4NUGF0aFNlcGFyYXRvcgQIHg1OZXZlckV4cGFuZGVkZ2RkGAEFF2N0bDAwJFRvcE5hdmlnYXRpb25NZW51Dw9kBRVNZWRpY2luZSAmIEhlYWx0aGNhcmVk6Wh8JW/TSWSYcSzh90O5iFqKfP0=" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+var MSOWebPartPageFormName = 'aspnetForm';
+function CallServer_19952136(arg, context) {WebForm_DoCallback('ctl00$ctl19',arg,SP.UI.MyLinksRibbon.MyLinksRibbonPageComponent.ribbonActionCallback,context,null,false); }function _myLinksRibbonLoad2()
+{
+    var fnd = function () {
+        try {
+            mylinks_init.MyLinksInit('CallServer_19952136'); 
+        } 
+        catch (Ex)
+        { }
+    };
+    RegisterSod('mylinks_init', '/_layouts/SP.UI.MyLinksRibbon.js');
+    LoadSodByKey('mylinks_init', fnd);
+}
+
+function _myLinksRibbonLoad1()
+{
+    ExecuteOrDelayUntilScriptLoaded(_myLinksRibbonLoad2, 'SP.Ribbon.js');
+}
+
+_spBodyOnLoadFunctionNames.push('_myLinksRibbonLoad1');
+var g_presenceEnabled = true;
+var g_wsaEnabled = false;
+var g_wsaLCID = 1033;
+var g_wsaSiteTemplateId = 'BLANKINTERNET#2';
+var g_wsaListTemplateId = 850;
+var _fV4UI=true;var _spPageContextInfo = {webServerRelativeUrl: "\u002fmh", webLanguage: 1033, currentLanguage: 1033, webUIVersion:4,pageListId:"{0dc2443e-a437-42dc-ae93-bfb388fc72dd}",pageItemId:2, alertsEnabled:true, siteServerRelativeUrl: "\u002f", allowSilverlightPrompt:'True'};
+                            function DoCallBack(filterText)
+                            {WebForm_DoCallback('ctl00$ctl24$g_e108809c_89db_4767_9d54_14c27ac1e6b8',filterText,UpdateFilterCallback,0,CallBackError,true)
+                            }
+                            function CallBackError(result, clientsideString)
+                            {                
+                            }
+                        document.onreadystatechange=fnRemoveAllStatus; function fnRemoveAllStatus(){removeAllStatus(true)};var dlc_fvsi = {"DefaultViews":[],"ViewUrls":[],"WebUrl":"\/mh"};//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+function _spNavigateHierarchy(nodeDiv, dataSourceId, dataPath, url, listInContext, type) {
+    CoreInvoke('ProcessDefaultNavigateHierarchy', nodeDiv, dataSourceId, dataPath, url, listInContext, type, document.forms.aspnetForm, "", "\u002fmh\u002fPages\u002fMedicineHealthcare.aspx");
+
+}
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+var _spWebPartComponents = new Object();//]]>
+</script>
+
+<script src="/WebResource.axd?d=GQIc0JI1j-z546ire6nIqUfSm6qCovWnavlZKBfvao0nesHY8yLcUIPjX2NpCx6_6gcg25iCRF73TaQKs1kAy-ZfoDY1&amp;t=635588408026805809" type="text/javascript"></script>
+<script src="/_layouts/blank.js?rev=QGOYAJlouiWgFRlhHVlMKA%3D%3D" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(DeferWebFormInitCallback) == 'function') DeferWebFormInitCallback();//]]>
+</script>
+
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWAgLw4enyDQL4+5CxB17iTgDEjPzhaf3v3z6jT3kYeyQW" />
+
+<!-- handles SharePoint scripts -->
+
+
+<!-- controls the web parts and zones -->
+
+
+<!-- this control is more navigation for mysites, otherwise it is empty -->
+
+
+<div id="topfixedcontentarea">
+<!-- page editing status bar -->
+	<div class="s4-notdlg">
+		<div id="s4-statusbarcontainer" class="s4-notdlg">
+			<div id="pageStatusBar" class="s4-status-s1"></div>
+		</div>
+	</div>
+<!-- =====  Begin Ribbon ============================================================ -->
+<div id="s4-ribbonrow" class="s4-pr s4-ribbonrowhidetitle" style="display:none;">
+
+	<div id="s4-ribboncont">
+
+		<!-- ribbon starts here -->
+		<div class='ms-cui-ribbonTopBars'><div class='ms-cui-topBar1'></div><div class='ms-cui-topBar2'><div id='RibbonContainer-TabRowLeft' class='ms-cui-TabRowLeft ms-siteactionscontainer s4-notdlg'>
+					
+					<!-- site actions -->
+					<span class="ms-siteactionsmenu" id="siteactiontd">
+					</span>
+			
+			  <!-- global navigation dhtml popout menu -->
+			  
+					<span class="s4-breadcrumb-anchor"><span style="height:16px;width:16px;position:relative;display:inline-block;overflow:hidden;" class="s4-clust"><a id="GlobalBreadCrumbNavPopout-anchor" onclick="CoreInvoke('callOpenBreadcrumbMenu', event, 'GlobalBreadCrumbNavPopout-anchor', 'GlobalBreadCrumbNavPopout-menu', 'GlobalBreadCrumbNavPopout-img', 's4-breadcrumb-anchor-open', 'ltr', '', false); return false;" onmouseover="" onmouseout="" title="Navigate Up" href="javascript:;" style="display:inline-block;height:16px;width:16px;"><img src="/_layouts/images/fgimg.png" alt="Navigate Up" style="border:0;position:absolute;left:-0px !important;top:-112px !important;" /></a></span></span><div class="ms-popoutMenu s4-breadcrumb-menu" id="GlobalBreadCrumbNavPopout-menu" style="display:none;">
+						<div class="s4-breadcrumb-top">
+							<span class="s4-breadcrumb-header">This page location is:</span>
+						</div>
+						
+							<ul class="s4-breadcrumb">
+	<li class="s4-breadcrumbRootNode"><span class="s4-breadcrumb-arrowcont"><span style="height:16px;width:16px;position:relative;display:inline-block;overflow:hidden;" class="s4-clust s4-breadcrumb"><img src="/_layouts/images/fgimg.png" alt="" style="border-width:0px;position:absolute;left:-0px !important;top:-353px !important;" /></span></span><a class="s4-breadcrumbRootNode" href="/">NewsRoom</a><ul class="s4-breadcrumbRootNode"><li class="s4-breadcrumbNode"><span class="s4-breadcrumb-arrowcont"><span style="height:16px;width:16px;position:relative;display:inline-block;overflow:hidden;" class="s4-clust s4-breadcrumb"><img src="/_layouts/images/fgimg.png" alt="" style="border-width:0px;position:absolute;left:-0px !important;top:-353px !important;" /></span></span><a class="s4-breadcrumbNode" href="/mh">Medicine &amp; Healthcare</a><ul class="s4-breadcrumbNode"><li class="s4-breadcrumbNode"><span class="s4-breadcrumb-arrowcont"><span style="height:16px;width:16px;position:relative;display:inline-block;overflow:hidden;" class="s4-clust s4-breadcrumb"><img src="/_layouts/images/fgimg.png" alt="" style="border-width:0px;position:absolute;left:-0px !important;top:-353px !important;" /></span></span><a class="s4-breadcrumbNode" href="http://news.wustl.edu/mh/_layouts/listform.aspx?ListId=%7B0DC2443E%2DA437%2D42DC%2DAE93%2DBFB388FC72DD%7D&amp;PageType=0">Pages</a><ul class="s4-breadcrumbNode"><li class="s4-breadcrumbCurrentNode"><span class="s4-breadcrumb-arrowcont"><span style="height:16px;width:16px;position:relative;display:inline-block;overflow:hidden;" class="s4-clust s4-breadcrumb"><img src="/_layouts/images/fgimg.png" alt="" style="border-width:0px;position:absolute;left:-0px !important;top:-353px !important;" /></span></span><span class="s4-breadcrumbCurrentNode">MedicineHealthcare</span></li></ul></li></ul></li></ul></li>
+</ul>
+						
+					</div>
+				
+				
+			<!-- save button at top of ribbon -->
+			</div><div id='RibbonContainer-TabRowRight' class='ms-cui-TabRowRight s4-trc-container s4-notdlg'>
+				
+				<!-- GlobalSiteLink0 delegate - the variation selector / shows nothing by default otherwise -->
+				
+
+				
+				<!-- Welcome / Login control -->
+				<div class="s4-trc-container-menu">
+					 <div>
+						
+<a id="ctl00_IdWelcome_ExplicitLogin" class="s4-signInLink" href="http://news.wustl.edu/mh/_layouts/Authenticate.aspx?Source=%2Fmh%2FPages%2FMedicineHealthcare%2Easpx" style="display:inline;">Sign In</a>
+
+						<!-- MultiLingual User Interface menu -->
+						
+<script type ="text/javascript">
+// <![CDATA[
+function OnSelectionChange(value)
+{
+	var today = new Date();
+	var oneYear = new Date(today.getTime() + 365 * 24 * 60 * 60 * 1000);
+	var url = window.location.href;
+	document.cookie = "lcid=" + value + ";path=/;expires=" + oneYear.toGMTString();
+	window.location.href = url;
+}
+// ]]>
+</script>
+
+						
+					</div>
+				</div>
+			
+				<!-- GlobalSiteLink2 delegate default shows nothing -->
+				
+				
+				<!-- link to launch developer dashboard if its activated by admin
+				<span>
+					<span class="s4-devdashboard">
+					
+					</span>
+				</span> -->
+			</div></div></div>
+<script type="text/javascript">
+//<![CDATA[
+var g_commandUIHandlers = {"name":"CommandHandlers","attrs":{},"children":[]};
+//]]>
+</script>
+	 
+	  <!-- end main ribbon control -->
+	</div>
+
+    <!-- dynamic notification area -->
+	<!--<div id="notificationArea" class="s4-noti"></div>-->
+
+    <!-- old navigation delegate? -->
+	
+			
+<span id="ctl00_SPNavigation_ctl00_publishingConsoleV4_publishingRibbon"></span>
+
+
+
+	
+ 	
+	<!-- top web part panel -->
+	<div id="WebPartAdderUpdatePanelContainer">
+		<div id="ctl00_WebPartAdderUpdatePanel">
+	
+				<span id="ctl00_WebPartAdder"></span>
+			
+</div>
+	</div>
+</div>
+
+<!-- =====  End Ribbon and other Top Content ============================================================ -->
+</div>
+
+<!-- =====  Start Scrolling Body Area ============================================================ -->
+
+<!-- these two div id's are used to setup the main scrolling page area, they should stay if you are sticking the ribbon to the top -->
+<div ID="s4-workspace" class="s4-nosetwidth">  <!-- NOTE: s4-nosetwidth is used when you are setting a fixed page width in css, remove for 100% -->
+  <div ID="s4-bodyContainer">
+  
+  <!-- id="mso_contentdiv" required, helps SharePoint put the web part editing pane in the main body on the right, you can move the ID if needed -->
+  <div id="ctl00_MSO_ContentDiv">
+  
+  <div class="bodyWrapper">
+<div class="wrapper">
+
+<div class="topBanner">
+	<a style="border-bottom: none;" href="http://www.wustl.edu">&nbsp;<img src="/cssimages/1linepos(CMYK)SM.gif" alt="WUSTL" /></a> 
+</div>
+<div class="toolBanner">
+	
+	<div class="toolset">
+		<div class="toolsetLinks">
+			<a href="/Pages/Contact.aspx">Contact</a> | <a href="/Pages/MediaResources.aspx">Media Resources &amp; Policies</a> | <a href="/Pages/Calendar.aspx">Calendar</a> | <a href="/Pages/Subscribe.aspx">Subscribe</a>
+		</div>
+		<div class="searchbox">
+			<div id="SRSB"> <div id="ctl00_g_b54753eb_fcc2_4937_9c5a_3541d9af497b">
+	<table class="ms-sbtable ms-sbtable-ex s4-search" cellpadding="0" cellspacing="0" border="0">
+		<tr class="ms-sbrow">
+			<td class="ms-sbcell"><input name="ctl00$g_b54753eb_fcc2_4937_9c5a_3541d9af497b$SE26EBB34_InputKeywords" type="text" maxlength="200" id="ctl00_g_b54753eb_fcc2_4937_9c5a_3541d9af497b_SE26EBB34_InputKeywords" accesskey="S" title="Search..." class="ms-sbplain" alt="Search..." onkeypress="javascript: return SE26EBB34_OSBEK(event);" style="width:230px;" /></td><td class="ms-sbgo ms-sbcell"><a id="ctl00_g_b54753eb_fcc2_4937_9c5a_3541d9af497b_SE26EBB34_go" title="Search" href="javascript:SE26EBB34_Submit()"><img title="Search" onmouseover="this.src='\u002fcssimages\u002fsearchbutton.png'" onmouseout="this.src='\u002fcssimages\u002fsearchbutton.png'" class="srch-gosearchimg" alt="Search" src="/cssimages/searchbutton.png" border="0" /></a></td><td class="ms-sbLastcell"></td>
+		</tr>
+	</table>
+</div></div>
+		<input type="text" name="__spDummyText1" style="display:none;" size=1/> 
+		<input type="text" name="__spDummyText2" style="display:none;" size=1/>
+		</div>
+
+	</div>
+
+	<h1 class="Newsroom"><a href="/"><img src="/cssimages/newsroom-logo.png" alt="" /></a></h1>
+</div>
+<div class="clear"></div>
+
+<div id="main">
+<div class="mainTop"> 
+<div class="leftColumn">
+	<div class="topicsList">
+		<ul style="display:none">
+		<li><a href="/ArticleGroups/Pages/mhc.aspx">Medicine &amp; Health Care</a></li>
+		<li><a href="">Business &amp; Law</a></li>
+		<li><a href="">Science &amp; Technology</a></li>
+		<li><a href="">Politics &amp; Public Policy</a></li>
+		<li><a href="">Culture &amp; Living</a></li>
+		<li><a href="">Campus &amp; Community</a></li>
+		<li><a href="">Visual &amp; Performing Arts</a></li>
+		<li><a href="">Athletics</a></li>
+		</ul>
+	</div>	
+		
+	<div>
+	
+	<table id="zz1_TopNavigationMenu" class="topicsNav" cellpadding="0" cellspacing="0" border="0">
+	<tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_TopNavigationMenun0">
+		<td><table class="topicsNavselected topicsNavItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td nowrap="nowrap" width="100%"><a class="topicsNavselected topicsNavItem" href="/mh/Pages/MedicineHealthcare.aspx" accesskey="1">Medicine & Healthcare</a></td>
+			</tr>
+		</table></td>
+	</tr><tr>
+		<td></td>
+	</tr><tr>
+		<td></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_TopNavigationMenun1">
+		<td><table class="topicsNavItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td nowrap="nowrap" width="100%"><a class="topicsNavItem" href="/bl/Pages/BusinessLaw.aspx">Business & Law</a></td>
+			</tr>
+		</table></td>
+	</tr><tr>
+		<td></td>
+	</tr><tr>
+		<td></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_TopNavigationMenun2">
+		<td><table class="topicsNavItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td nowrap="nowrap" width="100%"><a class="topicsNavItem" href="/st/Pages/ScienceTechnology.aspx">Science & Technology</a></td>
+			</tr>
+		</table></td>
+	</tr><tr>
+		<td></td>
+	</tr><tr>
+		<td></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_TopNavigationMenun3">
+		<td><table class="topicsNavItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td nowrap="nowrap" width="100%"><a class="topicsNavItem" href="/ppp/Pages/PoliticsPublicPolicy.aspx">Politics & Public Policy</a></td>
+			</tr>
+		</table></td>
+	</tr><tr>
+		<td></td>
+	</tr><tr>
+		<td></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_TopNavigationMenun4">
+		<td><table class="topicsNavItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td nowrap="nowrap" width="100%"><a class="topicsNavItem" href="/cl/Pages/CultureLiving.aspx">Culture & Living</a></td>
+			</tr>
+		</table></td>
+	</tr><tr>
+		<td></td>
+	</tr><tr>
+		<td></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_TopNavigationMenun5">
+		<td><table class="topicsNavItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td nowrap="nowrap" width="100%"><a class="topicsNavItem" href="/vpa/Pages/VisualPerformingArts.aspx">Visual & Performing Arts</a></td>
+			</tr>
+		</table></td>
+	</tr><tr>
+		<td></td>
+	</tr><tr>
+		<td></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_TopNavigationMenun6">
+		<td><table class="topicsNavItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td nowrap="nowrap" width="100%"><a class="topicsNavItem" href="/cc/Pages/CampusCommunity.aspx">Campus & Community</a></td>
+			</tr>
+		</table></td>
+	</tr><tr>
+		<td></td>
+	</tr><tr>
+		<td></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_TopNavigationMenun7">
+		<td><table class="topicsNavItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td nowrap="nowrap" width="100%"><a class="topicsNavItem" href="http://bearsports.wustl.edu/landing/index">Athletics</a></td>
+			</tr>
+		</table></td>
+	</tr><tr>
+		<td></td>
+	</tr><tr>
+		<td></td>
+	</tr><tr onmouseover="Menu_HoverStatic(this)" onmouseout="Menu_Unhover(this)" onkeyup="Menu_Key(event)" id="zz1_TopNavigationMenun8">
+		<td><table class="topicsNavItem" cellpadding="0" cellspacing="0" border="0" width="100%">
+			<tr>
+				<td nowrap="nowrap" width="100%"><a class="topicsNavItem" href="/an/Pages/AllArticles.aspx">All News</a></td>
+			</tr>
+		</table></td>
+	</tr><tr>
+		<td></td>
+	</tr>
+</table>
+
+	<!-- top navigation publishing data source -->
+			<div class="clear"></div>
+	</div>
+	<div class="leftColumnSection">
+		<a style="display:block;border-bottom:none;" href="/run"><img src="/cssimages/record-topic-link.jpg" alt="the record"/></a>
+	</div>	
+	<div class="spiffBox" style="width:205px;margin-top:15px;">
+		<div class="spiffContent"  style="width:190px;">
+			<div class="spiffHeader">Follow us</div>
+			<ul class="socialMedia">
+				<li><a href="http://www.facebook.com/wustl" id="facebook">Facebook</a></li>
+				<li><a href="http://twitter.com/WUSTLnews" id="twitter">Twitter</a></li>
+				<li><a href="http://www.youtube.com/wustlpa" id="youTube">YouTube</a></li>
+				<li><a href="/Pages/Subscribe.aspx" id="RSS">RSS</a></li>
+				<li><a href="http://www.futurity.org/university/washington-university-in-st-louis" id="Futurity">FUTURITY</a></li>
+			</ul>
+			<a href="/Pages/Subscribe.aspx" style="display:inline-block;color: #006f51;text-decoration: none;font-weight: bold;border-bottom: 1px dotted #333333;text-transform:uppercase;font-family:'Times New Roman', Times, serif">view all</a>
+
+		</div>
+	</div>
+	
+</div>		
+
+<div class="middleColumn">
+<div class="mainbody">
+	
+<div id="ctl00_PlaceHolderTwoColumnBodyContent_HTMLEditor_label" style='display:none'>Page Content</div><div id="ctl00_PlaceHolderTwoColumnBodyContent_HTMLEditor__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderTwoColumnBodyContent_HTMLEditor_label"><h1 class="topicHeader"><a target="_blank" href="http://feeds.feedburner.com/WUSTL-MH-News" style="float:right"><img src="/cssimages/rss-o-19x19.png" alt="rss" style="float:left" /></a> Medicine &amp; Healthcare</h1></div>
+	
+	<div id="ctl00_PlaceHolderTwoColumnBodyContent_PageContent22010_label" style='display:none'>Page Content 2 2010</div><div id="ctl00_PlaceHolderTwoColumnBodyContent_PageContent22010__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderTwoColumnBodyContent_PageContent22010_label"></div>
+
+<div class="prettify">
+	<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td id="MSOZoneCell_WebPartWPQ4" valign="top" class="s4-wpcell-plain"><table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="dd85ed60-24b0-47ce-8cc1-ca221925501f" HasPers="false" id="WebPartWPQ4" width="100%" allowDelete="false" style="" ><div id="ctl00_ctl24_g_dd85ed60_24b0_47ce_8cc1_ca221925501f">
+					<div>
+						<div style="margin-bottom: 30px;">
+							<div class="headline">
+								<a href="/news/Pages/Carrot-or-stick-Punishments-may-guide-behavior-more-effectively-than-rewards.aspx"><p>Carrot or stick? Punishments may guide behavior more effectively than rewards<br /></p></a>
+							</div><div>
+								<div class="articleImage">
+									<a href="/news/Pages/Carrot-or-stick-Punishments-may-guide-behavior-more-effectively-than-rewards.aspx"><img alt="" src="/news/PublishingImages/CarrotStick_rollup.jpg" style="BORDER: 0px solid; "></a>
+								</div><div class="teaserContent">
+									​<span style="line-height:1.2;background-color:initial">When it comes to rewards and punishments, which is more effective — the carrot or the stick? Researchers at Washington University in St. Louis have devised a simple experiment to test the effects of rewards and punishments on behavior and have found that punishments seem to be more effective at influencing behavior.</span><a href="/news/Pages/Carrot-or-stick-Punishments-may-guide-behavior-more-effectively-than-rewards.aspx" style="font-size: 80%; font-weight: bold; display: inline-block;">MORE</a>
+								</div>
+							</div><div class="clear">
+
+							</div>
+						</div><div style="margin-bottom: 30px;">
+							<div class="headline">
+								<a href="/news/Pages/Scientists-find-new-link-between-diabetes-and-Alzheimers.aspx"><p>Scientists find new link between diabetes and Alzheimer’s</p></a>
+							</div><div>
+								<div class="articleImage">
+									<a href="/news/Pages/Scientists-find-new-link-between-diabetes-and-Alzheimers.aspx"><img alt="Researchers" src="/news/PublishingImages/HoltzmanMacauleyRollUp.jpg" style="BORDER: 0px solid; "></a>
+								</div><div class="teaserContent">
+									<span>Researchers have uncovered a unique connection between 
+diabetes and Alzheimer’s disease, providing further evidence that a 
+disease that robs people of their memories may be affected by elevated blood sugar, according to scientists at 
+Washington University School of Medicine in St. Louis.<span style="display:inline-block"></span></span><a href="/news/Pages/Scientists-find-new-link-between-diabetes-and-Alzheimers.aspx" style="font-size: 80%; font-weight: bold; display: inline-block;">MORE</a>
+								</div>
+							</div><div class="clear">
+
+							</div>
+						</div><div style="margin-bottom: 30px;">
+							<div class="headline">
+								<a href="/news/Pages/Needleman-elected-to-American-Academy-of-Arts-and-Sciences.aspx"><p>Needleman elected to American Academy of Arts and Sciences<br /></p></a>
+							</div><div>
+								<div class="articleImage">
+									<a href="/news/Pages/Needleman-elected-to-American-Academy-of-Arts-and-Sciences.aspx"><img alt="" src="/news/PublishingImages/Needleman_rollup.jpg" style="BORDER: 0px solid; "></a>
+								</div><div class="teaserContent">
+									<p>Philip Needleman, PhD, former chair of the Department of Pharmacology at Washington University School of Medicine in St. Louis, has been elected a fellow of the American Academy of Arts and Sciences.</p><a href="/news/Pages/Needleman-elected-to-American-Academy-of-Arts-and-Sciences.aspx" style="font-size: 80%; font-weight: bold; display: inline-block;">MORE</a>
+								</div>
+							</div><div class="clear">
+
+							</div>
+						</div><div style="margin-bottom: 30px;">
+							<div class="headline">
+								<a href="/news/Pages/Innovative-family-planning-clinic-recruiting-study-participants.aspx"><p>Innovative family planning clinic recruiting study participants</p></a>
+							</div><div>
+								<div class="articleImage">
+									<a href="/news/Pages/Innovative-family-planning-clinic-recruiting-study-participants.aspx"><img alt="" src="/news/PublishingImages/clinicrollup.jpg" style="BORDER: 0px solid; "></a>
+								</div><div class="teaserContent">
+									<p>Washington University School of Medicine and the Brown School have received a $4 million grant to study whether a new model of providing family planning services can reduce unintended pregnancies and births. As part of the study, they are recruiting 10,000 women of child-bearing age in the St. Louis area to participate.</p><a href="/news/Pages/Innovative-family-planning-clinic-recruiting-study-participants.aspx" style="font-size: 80%; font-weight: bold; display: inline-block;">MORE</a>
+								</div>
+							</div><div class="clear">
+
+							</div>
+						</div><div style="margin-bottom: 30px;">
+							<div class="headline">
+								<a href="/news/Pages/Light-not-pain-killing-drugs-used-to-activate-brains-opioid-receptors.aspx"><p>Light — not pain-killing drugs — used to activate brain's opioid receptors</p></a>
+							</div><div>
+								<div class="articleImage">
+									<a href="/news/Pages/Light-not-pain-killing-drugs-used-to-activate-brains-opioid-receptors.aspx"><img alt="" src="/news/PublishingImages/Laser_rollup.jpg" style="BORDER: 0px solid; "></a>
+								</div><div class="teaserContent">
+									<p>Washington University School of Medicine neuroscientists, led by Michael R. Bruchas, PhD, assistant professor of anesthesiology and of neurobiology, have attached the light-sensing protein rhodopsin to opioid receptor parts to activate the receptor pathways using light from a laser fiber-optic device. They also influenced the behavior of mice using light, rather than drugs, to activate the reward response. </p><a href="/news/Pages/Light-not-pain-killing-drugs-used-to-activate-brains-opioid-receptors.aspx" style="font-size: 80%; font-weight: bold; display: inline-block;">MORE</a>
+								</div>
+							</div><div class="clear">
+
+							</div>
+						</div><div style="margin-bottom: 30px;">
+							<div class="headline">
+								<a href="/news/Pages/Washington-People-Regis-OKeefe.aspx">Washington People: Regis O’Keefe</a>
+							</div><div>
+								<div class="articleImage">
+									<a href="/news/Pages/Washington-People-Regis-OKeefe.aspx"><img alt="" src="/news/PublishingImages/OKeefe_150x150rollup.jpg" style="BORDER: 0px solid; "></a>
+								</div><div class="teaserContent">
+									<p>Regis J. O'Keefe, MD, PhD, is the new head of the Department of Orthopaedic Surgery. The former captain of the Yale University basketball team takes a collaborative approach to managing the department. O’Keefe, who specializes in musculoskeletal oncology, said his goal is to make those around him better.<br /></p><a href="/news/Pages/Washington-People-Regis-OKeefe.aspx" style="font-size: 80%; font-weight: bold; display: inline-block;">MORE</a>
+								</div>
+							</div><div class="clear">
+
+							</div>
+						</div><div style="margin-bottom: 30px;">
+							<div class="headline">
+								<a href="/news/Pages/Discovery-may-open-door-for-treating-fragile-X-carriers.aspx"><p>Discovery may open door for treating fragile X carriers<br /></p></a>
+							</div><div>
+								<div class="articleImage">
+									<a href="/news/Pages/Discovery-may-open-door-for-treating-fragile-X-carriers.aspx"><img alt="Researcher&#39;s portrait" src="/news/PublishingImages/BonniARollup.jpg" style="BORDER: 0px solid; "></a>
+								</div><div class="teaserContent">
+									Fragile X syndrome, an inherited cause of autism and intellectual disability, can have consequences even
+ for carriers of the disorder who don’t have full-blown symptoms. Researchers at Washington University School of Medicine in St. Louis have identified
+ a potential target for treatment for fragile X carriers.<a href="/news/Pages/Discovery-may-open-door-for-treating-fragile-X-carriers.aspx" style="font-size: 80%; font-weight: bold; display: inline-block;">MORE</a>
+								</div>
+							</div><div class="clear">
+
+							</div>
+						</div><div>
+							<a id="link" href="http://news.wustl.edu/mh/Pages/Allarticles.aspx">VIEW ALL MEDICINE & HEALTHCARE</a>
+						</div>
+					</div>
+				</div></div></td>
+			</tr>
+		</table></td>
+	</tr>
+</table></div>
+
+	
+
+	
+
+</div>
+</div>
+
+<div class="rightColumn">
+
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tr>
+		<td id="MSOZoneCell_WebPartWPQ3" valign="top" class="s4-wpcell-plain"><table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%">
+			<tr>
+				<td valign="top"><div WebPartID="e108809c-89db-4767-9d54-14c27ac1e6b8" HasPers="false" id="WebPartWPQ3" width="100%" allowDelete="false" style="" ><div class="spiffBox" xmlns:x="http://www.w3.org/2001/XMLSchema" xmlns:d="http://schemas.microsoft.com/sharepoint/dsp" xmlns:asp="http://schemas.microsoft.com/ASPNET/20" xmlns:__designer="http://schemas.microsoft.com/WebParts/v2/DataView/designer" xmlns:SharePoint="Microsoft.SharePoint.WebControls" xmlns:ddwrt2="urn:frontpage:internal"><div class="spiffContent"><div class="spiffHeader">media contacts</div><div class="personRecord"><div class="personNameBlack">Joni Westerhouse</div>Associate Vice Chancellor, Associate Dean Medical Public Affairs<br>(314) 286-0120<br><a href="mailto:westerhousej@wustl.edu">westerhousej@wustl.edu</a></div></div></div></div></td>
+			</tr>
+		</table></td>
+	</tr>
+</table>
+<menu class="ms-SrvMenuUI">
+	<ie:menuitem id="MSOMenu_Help" iconsrc="/_layouts/images/HelpIcon.gif" onmenuclick="MSOWebPartPage_SetNewWindowLocation(MenuWebPart.getAttribute('helpLink'), MenuWebPart.getAttribute('helpMode'))" text="Help" type="option" style="display:none">
+
+	</ie:menuitem>
+</menu>
+
+<div id="ctl00_PlaceHolderRightColumnBodyContent_PageContent32010_label" style='display:none'>Page Content 3 2010</div><div id="ctl00_PlaceHolderRightColumnBodyContent_PageContent32010__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl00_PlaceHolderRightColumnBodyContent_PageContent32010_label"></div>
+
+
+
+</div>
+
+
+<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+
+<div class="mainBottom">
+
+</div>
+
+<div class="clear"></div>
+
+
+</div>
+</div>	
+</div>
+
+<div class="footer">
+	<div class="footerBox">
+		<div style="float:left; width:150px; margin-right:40px;"> 
+			<div class="spiffHeader">subscribe</div>
+			<ul class="socialMedia">
+				<li><a href="http://www.facebook.com/wustl" id="facebook">Facebook</a></li>
+				<li><a href="http://twitter.com/WUSTLnews" id="twitter">Twitter</a></li>
+				<li><a href="http://www.youtube.com/wustlpa" id="youTube">YouTube</a></li>
+				<li><a href="/Pages/Subscribe.aspx" id="RSS">RSS</a></li>
+				<li><a href="http://www.futurity.org/university/washington-university-in-st-louis" id="Futurity" style="border:none;">FUTURITY</a></li>
+			</ul>			<a href="/Pages/Subscribe.aspx" style="display:inline-block;color: #006f51;text-decoration: none;font-weight: bold;border-bottom: 1px dotted #333333;text-transform:uppercase;font-family:'Times New Roman', Times, serif">view all</a>
+		</div>
+		<div style="float:left; width:300; margin-right: 133px;">
+			<div class="spiffHeader">stories by school</div>
+			 <ul class="schools" style="margin-top:10px;display:none;"> 
+				<li><a href="">Arts &amp; Sciences</a></li>				
+				<li><a href="">Olin Business School</a></li>
+				<li><a href="">Sam Fox School of Design &amp; Visual Arts</a></li>
+				<li><a href="">School of Engineering &amp; Applied Science</a></li>
+				<li><a href="">School of Law</a></li>
+				<li><a href="">School of Medicine</a></li>
+				<li><a href="">George Warren Brown School of Social Work</a></li>
+			</ul>
+			
+ <div style="margin-top:10px;">				
+<table class="s4-wpTopTable" border="0" cellpadding="0" cellspacing="0" width="100%">
+	<tr>
+		<td valign="top"><div WebPartID="00000000-0000-0000-0000-000000000000" HasPers="true" id="WebPartWPQ2" width="100%" class="ms-WPBody" OnlyForMePart="true" allowDelete="false" style="" ><table id="tocwp" cellspacing="0px" cellpadding="0px" class="toc-layout-main"><tr><td id="column" width="100%" valign="top"><div class="school-section"><div><div class="schoolList"><span id="Schools" class="schoolLinks"><a href="/schools/ArtSciences/Pages/ArtsScience.aspx" style="color:#000000">Arts &amp; Sciences</a></span></div></div></div><div class="school-section"><div><div class="schoolList"><span id="Schools" class="schoolLinks"><a href="/schools/Business/Pages/Business.aspx" style="color:#000000">Olin Business School</a></span></div></div></div><div class="school-section"><div><div class="schoolList"><span id="Schools" class="schoolLinks"><a href="/schools/Art/Pages/DesignVisualArts.aspx" style="color:#000000">Sam Fox School of Design &amp; Visual Arts</a></span></div></div></div><div class="school-section"><div><div class="schoolList"><span id="Schools" class="schoolLinks"><a href="/schools/Engineering/Pages/EngineeringAppliedScience.aspx" style="color:#000000">School of Engineering &amp; Applied Science</a></span></div></div></div><div class="school-section"><div><div class="schoolList"><span id="Schools" class="schoolLinks"><a href="/schools/Law/Pages/SchoolofLaw.aspx" style="color:#000000">School of Law</a></span></div></div></div><div class="school-section"><div><div class="schoolList"><span id="Schools" class="schoolLinks"><a href="/schools/Medicine/Pages/SchoolofMedicine.aspx" style="color:#000000">School of Medicine</a></span></div></div></div><div class="school-section"><div><div class="schoolList"><span id="Schools" class="schoolLinks"><a href="/schools/SocialWork/Pages/SocialWork.aspx" style="color:#000000">Brown School</a></span></div></div></div></td ></tr></table></div></td>
+	</tr>
+</table>
+</div>		
+			
+			
+		</div>
+		<div style="float:left; width:300px;">
+			<div class="storyHeader" style="border:none"><h5><a href="/pages/contact.aspx">contacts for news media</a></h5></div>
+			<p>For 24-hour-a-day media assistance, or to schedule an expert for interview using our free T.V. &amp; radio studio, please <a href="/Pages/Contact.aspx">contact us.</a></p>
+			<br />
+			<div class="storyHeader" style="border:none"><h5><a href="http://emergency.wustl.edu">Emergency Info</a></h5></div>
+			
+			
+			<p><a href="http://www.wustl.edu">Washington University in St. Louis</a><br />
+			One Brookings Drive, St. Louis, MO 63130<br />
+			<a href="/Pages/Copyright.aspx">Copyright 2014</a>
+			</p>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+
+
+	<!-- the developer dashboard can be turned on by administrators and shows debuging and performance info for the page -->
+	<div id="DeveloperDashboard" class="ms-developerdashboard">
+		
+	</div>
+
+  </div>
+  </div>
+</div>
+
+<!-- =====  End scrolling body area with these two previous div's ============================================================ -->
+
+<!-- The form digest security control used to for security validation on forms -->
+
+	
+
+
+<!-- =====  Hidden Placeholders ============================================================ -->
+
+
+<!-- Handle Search "enter" key and back button -->
+<input type="text" name="__spDummyText1" style="display:none;" size="1"/>
+<input type="text" name="__spDummyText2" style="display:none;" size="1"/>
+
+<div id="ctl00_panelZone">
+	<div style='display:none' id='hidZone'></div>
+</div><input type='hidden' id='_wpcmWpid' name='_wpcmWpid' value='' /><input type='hidden' id='wpcmVal' name='wpcmVal' value=''/>
+
+<script type="text/javascript">
+//<![CDATA[
+var _spFormDigestRefreshInterval = 1440000;window.g_updateFormDigestPageLoaded = new Date(); window.g_updateFormDigestPageLoaded.setDate(window.g_updateFormDigestPageLoaded.getDate() -5);function loadMDN2() { EnsureScript('MDN.js', typeof(loadFilterFn), null); }
+function loadMDN1() { ExecuteOrDelayUntilScriptLoaded(loadMDN2, 'sp.ribbon.js'); }
+_spBodyOnLoadFunctionNames.push('loadMDN1');
+function _spNavigateHierarchyEx(nodeDiv, dataSourceId, dataPath, url, listInContext, type, additionalQString) {
+    SetAdditionalNavigateHierarchyQString(additionalQString);
+    g_originalSPNavigateFunc(nodeDiv, dataSourceId, dataPath, url, listInContext, type);
+}
+
+g_originalSPNavigateFunc = _spNavigateHierarchy;
+_spNavigateHierarchy = _spNavigateHierarchyEx;
+
+function EnsureScripts(scriptInfoList, finalFunction)
+{
+if (scriptInfoList.length == 0)
+{
+finalFunction();
+}
+else
+{
+var scriptInfo = scriptInfoList.shift();
+var rest = function () { EnsureScripts(scriptInfoList, finalFunction); };
+var defd;
+try
+{
+eval('defd = typeof(' + scriptInfo[1] + ');');
+}
+catch (e)
+{
+defd = 'undefined';
+}
+if (scriptInfo[2])
+{
+EnsureScript(scriptInfo[0], defd, null);
+ExecuteOrDelayUntilScriptLoaded(rest, scriptInfo[0]);
+}
+else
+{
+EnsureScript(scriptInfo[0], defd, rest);
+}
+}
+}
+function PublishingRibbonUpdateRibbon()
+{
+var pageManager = SP.Ribbon.PageManager.get_instance();
+if (pageManager)
+{
+pageManager.get_commandDispatcher().executeCommand('appstatechanged', null);
+}
+}var _fV4UI = true;
+function _RegisterWebPartPageCUI()
+{
+    var initInfo = {editable: false,isEditMode: false,allowWebPartAdder: false,listId: "{0dc2443e-a437-42dc-ae93-bfb388fc72dd}",itemId: 2,recycleBinEnabled: true,enableMinorVersioning: true,enableModeration: true,forceCheckout: true,rootFolderUrl: "\u002fmh\u002fPages",itemPermissions:{High:16,Low:196673}};
+    SP.Ribbon.WebPartComponent.registerWithPageManager(initInfo);
+    var wpcomp = SP.Ribbon.WebPartComponent.get_instance();
+    var hid;
+    hid = document.getElementById("_wpSelected");
+    if (hid != null)
+    {
+        var wpid = hid.value;
+        if (wpid.length > 0)
+        {
+            var zc = document.getElementById(wpid);
+            if (zc != null)
+                wpcomp.selectWebPart(zc, false);
+        }
+    }
+    hid = document.getElementById("_wzSelected");
+    if (hid != null)
+    {
+        var wzid = hid.value;
+        if (wzid.length > 0)
+        {
+            wpcomp.selectWebPartZone(null, wzid);
+        }
+    }
+}
+ExecuteOrDelayUntilScriptLoaded(_RegisterWebPartPageCUI, "sp.ribbon.js"); var __wpmExportWarning='This Web Part Page has been personalized. As a result, one or more Web Part properties may contain confidential information. Make sure the properties contain information that is safe for others to read. After exporting this Web Part, view properties in the Web Part description file (.WebPart) by using a text editor such as Microsoft Notepad.';var __wpmCloseProviderWarning='You are about to close this Web Part.  It is currently providing data to other Web Parts, and these connections will be deleted if this Web Part is closed.  To close this Web Part, click OK.  To keep this Web Part, click Cancel.';var __wpmDeleteWarning='You are about to permanently delete this Web Part.  Are you sure you want to do this?  To delete this Web Part, click OK.  To keep this Web Part, click Cancel.';
+ExecuteOrDelayUntilScriptLoaded(
+function()
+{
+var initInfo = 
+{
+itemPermMasks: {High:16,Low:196673},
+listPermMasks: {High:16,Low:196673},
+listId: "0dc2443e-a437-42dc-ae93-bfb388fc72dd",
+itemId: 2,
+workflowsAssociated: true,
+editable: false,
+doNotShowProperties: false,
+enableVersioning: true
+};
+SP.Ribbon.DocLibAspxPageComponent.registerWithPageManager(initInfo);
+},
+"sp.ribbon.js");
+var g_disableCheckoutInEditMode = false;
+var _spWebPermMasks = {High:16,Low:196673};//]]>
+</script>
+<script type="text/javascript" language="JavaScript" defer="defer">
+<!--
+function SearchEnsureSOD() { EnsureScript('search.js',typeof(GoSearch)); } _spBodyOnLoadFunctionNames.push('SearchEnsureSOD');function SE26EBB34_Submit() {SearchEnsureSOD();GoSearch(null,'ctl00_g_b54753eb_fcc2_4937_9c5a_3541d9af497b_SE26EBB34_InputKeywords',null,true,false,null,null,null,null,null,'\u002fSearch\u002fResults.aspx', 'This Site','This List', 'This Folder', 'Related Sites', '\u002fmh\u002f_layouts\u002fOSSSearchResults.aspx', '', 'Please enter one or more search words.');}
+// -->
+</script><script type="text/javascript" language="JavaScript" >
+// append an onload event handler
+$addHandler(window, 'load', function() {
+  document.getElementById('ctl00_g_b54753eb_fcc2_4937_9c5a_3541d9af497b_SE26EBB34_InputKeywords').name = 'InputKeywords';
+});
+function SE26EBB34_OSBEK(event1) { 
+if((event1.which == 10) || (event1.which == 13))
+{   
+SE26EBB34_Submit();return false;
+}
+}
+// -->
+</script>
+<script type="text/javascript">
+//<![CDATA[
+var zz1_TopNavigationMenu_Data = new Object();
+zz1_TopNavigationMenu_Data.disappearAfter = 500;
+zz1_TopNavigationMenu_Data.horizontalOffset = 0;
+zz1_TopNavigationMenu_Data.verticalOffset = 0;
+zz1_TopNavigationMenu_Data.hoverClass = 'topNavFlyOutsHover';
+if (typeof(overrideMenu_HoverStatic) == 'function' && typeof(Menu_HoverStatic) == 'function')
+{
+_spBodyOnLoadFunctionNames.push('enableFlyoutsAfterDelay');
+Menu_HoverStatic = overrideMenu_HoverStatic;
+}
+//]]>
+</script>
+<script type="text/javascript">
+// <![CDATA[
+// ]]>
+</script>
+<script type="text/javascript">RegisterSod("sp.core.js", "\u002f_layouts\u002fsp.core.js?rev=7ByNlH\u00252BvcgRJg\u00252BRCctdC0w\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.res.resx", "\u002f_layouts\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252ERes\u0026rev=b6\u00252FcRx1a6orhAQ\u00252FcF\u00252B0ytQ\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.runtime.js", "\u002f_layouts\u002fsp.runtime.js?rev=IGffcZfunndj0247nOxKVg\u00253D\u00253D");RegisterSodDep("sp.runtime.js", "sp.core.js");RegisterSodDep("sp.runtime.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("sp.ui.dialog.js", "\u002f_layouts\u002fsp.ui.dialog.js?rev=IuXtJ2CrScK6oX4zOTTy\u00252BA\u00253D\u00253D");RegisterSodDep("sp.ui.dialog.js", "sp.core.js");RegisterSodDep("sp.ui.dialog.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("sp.js", "\u002f_layouts\u002fsp.js?rev=SpGB4\u00252FzYmCWpwoPWNG2dsg\u00253D\u00253D");RegisterSodDep("sp.js", "sp.core.js");RegisterSodDep("sp.js", "sp.runtime.js");RegisterSodDep("sp.js", "sp.ui.dialog.js");RegisterSodDep("sp.js", "sp.res.resx");</script>
+<script type="text/javascript">RegisterSod("cui.js", "\u002f_layouts\u002fcui.js?rev=k\u00252B4HtUzT9\u00252B3mSycgD7gPaQ\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("core.js", "\u002f_layouts\u002f1033\u002fcore.js?rev=bewW9rgjZqv0mAB2FcLYLw\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("inplview", "\u002f_layouts\u002finplview.js?rev=ZfVDYd30Z2D01DIRRl8ETA\u00253D\u00253D");RegisterSodDep("inplview", "core.js");RegisterSodDep("inplview", "sp.js");</script>
+<script type="text/javascript">RegisterSod("ribbon", "\u002f_layouts\u002fsp.ribbon.js?rev=F\u00252BUEJ66rbXzSvpf7nN69wQ\u00253D\u00253D");RegisterSodDep("ribbon", "core.js");RegisterSodDep("ribbon", "sp.core.js");RegisterSodDep("ribbon", "sp.js");RegisterSodDep("ribbon", "cui.js");RegisterSodDep("ribbon", "sp.res.resx");RegisterSodDep("ribbon", "sp.runtime.js");RegisterSodDep("ribbon", "inplview");</script>
+<script type="text/javascript">RegisterSod("sp.ui.policy.resources.resx", "\u002f_layouts\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252EUI\u00252EPolicy\u00252EResources\u0026rev=YhBHGmUAGyJ3lAgSdE4V\u00252Fw\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("mdn.js", "\u002f_layouts\u002fmdn.js?rev=gwmFFJ2\u00252FfFacqXWAqG\u00252FqKg\u00253D\u00253D");RegisterSodDep("mdn.js", "sp.core.js");RegisterSodDep("mdn.js", "sp.runtime.js");RegisterSodDep("mdn.js", "sp.js");RegisterSodDep("mdn.js", "cui.js");RegisterSodDep("mdn.js", "ribbon");RegisterSodDep("mdn.js", "sp.ui.policy.resources.resx");</script>
+<script type="text/javascript">RegisterSod("sp.publishing.resources.resx", "\u002f_layouts\u002fScriptResx.ashx?culture=en\u00252Dus\u0026name=SP\u00252EPublishing\u00252EResources\u0026rev=q6nxzZIVVXE5X1SPZIMD3A\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("sp.ui.pub.ribbon.js", "\u002f_layouts\u002fsp.ui.pub.ribbon.js?rev=RGQSBI9Dm0E345iq\u00252FxUpHg\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("msstring.js", "\u002f_layouts\u002f1033\u002fmsstring.js?rev=QtiIcPH3HV7LgVSO7vONFg\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("browserScript", "\u002f_layouts\u002f1033\u002fnon_ie.js?rev=EVTj1bu32\u00252FMla6SDN\u00252FsNTA\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("WPAdderClass", "\u002f_layouts\u002fwpadder.js?rev=rmznE9UTHIeAZF\u00252FGRiGNVA\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSod("search.js", "\u002f_layouts\u002fsearch.js?rev=BjP0\u00252BmPXUFhF7kDZmHIaVg\u00253D\u00253D");</script>
+<script type="text/javascript">RegisterSodDep("browserScript", "msstring.js");</script>
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.initialize();
+//]]>
+</script>
+</form>
+
+<!-- extra form for some instances -->
+
+
+<!-- warn users of old browsers that they need to upgrade
+ -->
+
+</body>
+</html><!-- Rendered using cache profile:Newsroom Anonymous Visitors at: 2015-05-08T09:18:05 -->

@@ -1,0 +1,38 @@
+---
+layout: post
+title: AGBT 2008, part 2
+date: 2008-02-29 17:29:00.000000000 -06:00
+categories:
+- genomics
+tags:
+- AGBT
+- genomics
+- informatics
+- science
+- software
+status: publish
+type: post
+published: true
+meta:
+  blogger_blog: politigenomics.blogspot.com
+  blogger_author: dd
+  blogger_permalink: "/2008/02/agbt-2008-part-2.html"
+  _edit_last: '2'
+author:
+  login: admin
+  email: ddgenome@gmail.com
+  display_name: admin
+  first_name: ''
+  last_name: ''
+excerpt: !ruby/object:Hpricot::Doc
+  options: {}
+---
+<p>Well, here is another <a href="http://www.politigenomics.com/2008/02/agbt-2008-part-1.html">quick hit</a> from <a href="http://www.agbt.org/flash/about.html">AGBT 2008</a>.  This year there were over 550 attendees and they still had to turn away over 200 people.  No doubt all the interest is due to the next-generation sequencing technologies, giving labs and companies all over the world the ability to sequence DNA.  Of course, just being able to generate the data does not mean you know how to deal with them.  To that end, in this entry I will talk about some of the software that was mentioned at AGBT.</p>
+<ul>
+<li><a href="http://www.sanger.ac.uk/Software/analysis/SSAHA2/">ssaha_pileup</a> - ssaha_pileup is part of the SSAHA2 (Sequence Search and Alignment by Hashing Algorithm) package.  It uses the SSAHA engine for alignments and then uses ssaha_pileup to call the consensus base at each position, thereby detecting <a href="http://en.wikipedia.org/wiki/Single_nucleotide_polymorphism">SNP</a>'s.  You can find the <a href="ftp://ftp.sanger.ac.uk/pub/zn1/ssaha_pileup/">source code</a> and <a href="ftp://ftp.sanger.ac.uk/pub/zn1/ssaha_pileup/ssaha_pileup-readme">documentation</a> on their FTP site.</li>
+<li><a href="http://www.wikilims.com/">WikiLIMS</a> - WikiLIMS is a laboratory information management system based on the popular <a href="http://www.mediawiki.org/">MediaWiki</a> engine.  Basically the folks at <a href="http://blog.bioteam.net/tag/wikilims/">BioTeam</a> have created a few templates for MediaWiki allowing people to enter standard information about each sequencing, e.g., sample(s) information, cycles, instrument, and technician.  Once those fields are populated, the user can the use then resulting page as an electronic lab notebook for the experiment.  Clearly, they are targeting small labs with a couple or fewer instruments.  <a href="http://www.cshl.edu/public/SCIENCE/mccombie.html">Dick McCombie</a> at <a href="http://www.cshl.edu/">Cold Spring Harbor Laboratory</a> mentioned in his talk that their sequencing group uses it.</li>
+<li><a href="http://www.annoj.org/">Anno-J</a> - Anno-J is very cool, Web 2.0 based software for annotating genomes.  The author says it is not quite ready for release, but he is planning on releasing it as free/open source software.  He hopes that will encourage others to design their own tracks and plugins.</li>
+<li><a href="http://www.cbcb.umd.edu/software/glimmer/">Glimmer</a> - Glimmer is a system for finding genes in microbial DNA.  It is not new, but it was mentioned at the conference so I thought I would include it.</li>
+<li><a href="http://www.pnas.org/cgi/content/full/104/50/20007">GISTIC</a> - Genomic Identification of Significant Targets in Cancer (GISTIC) is a program that takes as input a variety of whole genome array data from cancer samples and identifies regions which are statistically likely to play a role in cancer.</li>
+<li><a href="http://sourceforge.net/projects/vcake">VCAKE</a> - VCAKE is a short-read <span style="font-style:italic;">de novo</span> assembler.  We have found that VCAKE performs quite well when you are able to provide it with a sequence to nucleate <a href="http://en.wikipedia.org/wiki/Contig">contigs</a> around.  The authors are working on a color-space version for AB SOLiD data.</li>
+</ul>
