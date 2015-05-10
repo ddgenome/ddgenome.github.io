@@ -14,7 +14,10 @@ description: "PolITiGenomics description"
       <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">{{ post.title }}</h2>
       </a>
-      <p class="post-meta">Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}</p>
+      <p class="post-meta">
+        {{ post.content | strip_html | truncatewords:75}}
+        <a href="{{ post.url }}">Read more...</a>
+      </p>
     </div>
     <hr>
     {% endfor %}
