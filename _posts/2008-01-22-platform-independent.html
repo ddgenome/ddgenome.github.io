@@ -1,10 +1,6 @@
 ---
 layout: post
 title: Platform independent
-date: 2008-01-22 15:11:00.000000000 -06:00
-categories:
-- genomics
-- IT
 tags:
 - genomics
 - Illumina
@@ -12,23 +8,9 @@ tags:
 - IT
 - science
 - software
-status: publish
-type: post
 published: true
-meta:
-  blogger_blog: politigenomics.blogspot.com
-  blogger_author: dd
-  blogger_permalink: "/2008/01/platform-independent.html"
-  _edit_last: '2'
-author:
-  login: dd
-  email: dooling@gmail.com
-  display_name: dd
-  first_name: David
-  last_name: Dooling
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
 ---
+
 <p>When <a href="http://java.sun.com/">Java</a> first hit the software development scene, the mantra was "write once, run anywhere".  Well, Java, or more precisely the way computer science departments use Java, has received some <a href="http://www.stsc.hill.af.mil/CrossTalk/2008/01/0801DewarSchonberg.html">criticism</a> <a href="http://itmanagement.earthweb.com/career/article.php/3722876">recently</a>, but it was not related to that mantra, despite the fact the mantra's goal is rarely achieved.  While Java runs on the Java Virtual Machine (JVM) which is, in theory, platform independent, Java does not prevent developers from hard-coding platform-specific assumptions in their code.  The location of a system file, the path to supporting files, program availability, etc. are all examples of things you should avoid when writing software.  It is not really hard to make these things configurable or to test if something exists before trying to use it.  Unfortunately, this is often not done and people deploy software that is not only tied to a specific platform, but indeed it is tied to a specific version of an operating system with specific software installed in specific places.</p>
 <p>This happens a lot in bioinformatics software.  Someone writes a program, thinks others might find it useful, deploys it, and finds out that not everyone has her systems set up just like the software author.  To some extent, this is understandable.  A lot of software people write to help them with a task; making it useful for others is an afterthought.  Unfortunately, this is not the only circumstance under which it happens.  We often receive software from instrument vendors that have all sorts of horrible assumptions built into it.  Getting back to Java, yes, a lot of this platform-specific software is written in Java.</p>
 <p>This lack of platform independence is most noticeable on software from next-gen sequencing vendors.  Most of these instruments generate too much data to be analyzed in real time by a single computer.  To get around this limitation, the vendors provide software that can be run <span style="font-style:italic;">off instrument</span>.  (Some vendors also ship the instrument with an extra computer or cluster to do analysis while the instrument is running, but you always need the option to reanalyze off instrument.)  Unfortunately, the software is written to only be run on a system with the exact same setup as the instrument computer.  And I mean exact.  Not just the operating system (most use GNU/Linux as do we), but the exact distribution, exact version of the distribution, exact clustering software, exact filesystem layout, etc.  How they every expect something written as narrowly as that to operate in a the multi-platform, multi-user environments they are shipping these instruments to, I have no idea.  Do they expect everyone to abandon their current infrastructure and set up something that the vendors have (apparently) arbitrarily chosen?  It's ridiculous.</p>

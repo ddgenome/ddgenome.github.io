@@ -1,28 +1,13 @@
 ---
 layout: post
 title: Short Read Archive
-date: 2008-05-29 13:37:01.000000000 -05:00
-categories:
-- genomics
-- IT
 tags:
 - CSHL
 - genomics
 - informatics
-status: publish
-type: post
 published: true
-meta:
-  _edit_last: '2'
-author:
-  login: dd
-  email: dooling@gmail.com
-  display_name: dd
-  first_name: David
-  last_name: Dooling
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
 ---
+
 <p>While at Cold Spring Harbor, I attended a presentation by <a href="http://www.valexllc.com/">Valex</a> about their format for storing data in the <a href="http://www.ncbi.nlm.nih.gov/Traces/sra/sra.cgi">NCBI Short Read Archive (SRA)</a> (I mentioned the SRA in a <a href="http://www.politigenomics.com/2008/05/n-genomes.html">previous post</a>). Rather than storing the data in the current standard for transferring massively-parallel sequencing data, <a href="http://srf.sourceforge.net/">SRF</a>, they have designed a new format that builds on their learnings from the current <a href="http://www.ncbi.nlm.nih.gov/Traces/trace.cgi?">trace archive</a>, but tailors it to the unprecedented amount of data associated with massively-parallel sequence data (Valex are NCBI contractors who developed and maintain the trace archive). The format is a database, with a few twists. First, the database storage utilizes the file system directly rather than storing its data structured within large files. Second, the database is <a href="http://en.wikipedia.org/wiki/Column-oriented_DBMS">column oriented</a> rather than row oriented. The result is that each SRA submission is a directory on the file system and each data type is stored in a directory within the submission directory.</p>
 <p>Column-oriented database architecture is not a new idea, but it does seem well suited for the SRA.  In traditional relational databases, a table has several columns of related items. For example, a "person" table might have a column for "first_name", a column for "last_name", and a column to hold a unique identifier (id), typically an integer. When you add an entry to the database, you add a row in the table. In the person example, you might add "Jane" in the first_name column, "Doe" in the last_name column, and a unique number in the id column. In a column-based database, you basically translate each column into its own two column table, one column for the data and one for the unique identifier. So in the person example you would still have two "columns", but the columns would each store the appropriate name (first or last) and the id associated with that name. This architecture performs very well when you only retrieve one type of data at a time. Other advantages include that each column is fully indexed, each column compresses well (since each column contains only one type of data), and adding new data types (columns) is easy. One disadvantage is that every time you want to retrieve more than one data type, a "join" is required. So, for example, if you want to retrieve the sequence base calls and quality values for some number of reads, you will need to find that read separately in the base call column and the base quality column. All in all, it seems the advantages outweigh the disadvantages, especially considering the likely use cases for the data in the SRA.</p>
 <p>The best part about their design is that they are planning to release the source code used to create and maintain the SRA freely (when we spoke, they had not settled on a free/open-source license). If they actually follow through with this (which they said would take a few months to remove NCBI-specific code), it would be of great benefit to researchers working with this data as the SRA format is likely more efficient for analyzing this data while the SRF is more efficient for transferring the data. If they don't follow through, someone else will probably fill the gap as the column-oriented architecture seems to be the right idea and its implementation need not be difficult.</p>

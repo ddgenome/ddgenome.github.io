@@ -1,10 +1,6 @@
 ---
 layout: post
 title: Illumina cluster needs
-date: 2009-06-18 11:13:36.000000000 -05:00
-categories:
-- genomics
-- IT
 tags:
 - compute
 - FLOSS
@@ -13,20 +9,9 @@ tags:
 - IT
 - LSF
 - software
-status: publish
-type: post
 published: true
-meta:
-  _edit_last: '2'
-author:
-  login: dd
-  email: dooling@gmail.com
-  display_name: dd
-  first_name: David
-  last_name: Dooling
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
 ---
+
 <p>There is an interesting thread over at the <a href="http://groups.google.com/group/solexa?hl=en">Solexa Google Group</a> about the <a href="http://groups.google.com/group/solexa/browse_thread/thread/38ff88dcf5f5df17?hl=en">IT infrastructure needed to support an Illumina Genome Analyzer (GA)</a>. The discussion focuses mostly on the cluster and, to a lesser extent, the storage and network required to operate the instrument and generate sequence data (primary analysis). At <a href="http://genome.wustl.edu/">The Genome Center</a>, we use Platform LSF HPC as our batch scheduler and currently use <a href="/2008/03/illumina-genome-analyzer-pipeline-and.html">lsgmake-gap</a> to execute the GAPipeline (the Illumina primary analysis software) in parallel on our cluster. However, GAPipeline is developed and tested by Illumina on a cluster managed by <a href="http://www.sun.com/software/sge/">Sun Grid Engine (SGE)</a>, which is <a href="http://gridengine.sunsource.net/">free/open source software</a>. This situation creates some headaches for us because as the internals of GAPipeline change, we need to <a href="/2009/02/lsgmake-gap-for-gapipeline-13.html">regularly update lsgmake-gap</a> so that GAPipeline will continue to run properly on our cluster. Several years ago when we migrated to LSF, the driving force for the selection of LSF was that it was the only batch scheduler that could handle scheduling 50,000+ jobs at a time (a regular occurrence on our cluster). Fortunately, users may no longer have to choose between scalability and ease of use when running GAPipeline as part of their larger computational needs. Chris Dagdigian, who writes the <a href="http://gridengine.info/">gridengine.info blog</a>, had this information about the current capabilities of SGE.</p>
 <blockquote><ol>
 <li>SGE 6.2 design goal includes supporting a single array job with 500,000 tasks and hundreds of thousands of concurrent jobs</li>

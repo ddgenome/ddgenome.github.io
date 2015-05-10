@@ -1,28 +1,11 @@
 ---
 layout: post
 title: Lustre bluster
-date: 2008-02-18 15:18:00.000000000 -06:00
-categories:
-- IT
 tags:
 - IT
 - Lustre
 - storage
-status: publish
-type: post
 published: true
-meta:
-  blogger_blog: politigenomics.blogspot.com
-  blogger_author: dd
-  blogger_permalink: "/2008/02/lustre-bluster.html"
-  _edit_last: '1'
-author:
-  login: admin
-  email: ddgenome@gmail.com
-  display_name: admin
-  first_name: ''
-  last_name: ''
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
 ---
+
 <p>What is <a href="http://wiki.lustre.org/index.php?title=Main_Page">Lustre</a>? It is a cluster file system developed by Cluster File Systems, Inc., which was <a href="http://www.sun.com/software/clusterfs/index.xml">recently purchased</a> by <a href="http://www.sun.com/">Sun</a>.  We do not have much experience with Lustre but we have played around a bit with it in house and I have talked a lot with other centers who do use it (like <a href="http://www.sanger.ac.uk/">Sanger</a>).  The main advantages of Lustre are that it is very scalable and can sustain very high performance.  The two main problems with Lustre is that it is extremely difficult to get working and it is very difficult to back up your data on a Lustre file system.  The difficulty in getting it to work seems to be a business strategy of Cluster File Systems.  It is hard to get paid for installation and configuration consulting if you have a well-documented, easy to perform process.  It will be interesting to see if this will change given <a href="http://blogs.sun.com/jonathan/">Sun CEO Jonathan Schwartz</a>'s well-publicized commitment to open source software.  The second difficulty, back up, may be a bit of a red herring.  Do you really want to put archive-worthy data on a high-performance, clustered, 20 TB file systems that depends on a metadata server for file system integrity?  Lustre file systems should really be used for high-performance scratch space.  Once the calculations are done, move the data somewhere else.  Of course, if you have a lot of data, this may take a while.  So you may want to move it two places: on-line and off-line storage.  Because if you have a lot of data to move, it will also be a lot of data to back up.  So you may just want to dump it to tape one time while you are dumping it to your on-line storage.</p>

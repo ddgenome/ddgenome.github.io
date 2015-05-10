@@ -1,27 +1,13 @@
 ---
 layout: post
 title: The central dogma of cancer genomics
-date: 2008-10-24 12:44:45.000000000 -05:00
-categories:
-- genomics
 tags:
 - genomics
 - health
 - informatics
 - science
 - TCGA
-status: publish
-type: post
 published: true
-meta:
-  _edit_last: '2'
-author:
-  login: dd
-  email: dooling@gmail.com
-  display_name: dd
-  first_name: David
-  last_name: Dooling
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
 ---
+
 <p>Today, <a href="http://www.mskcc.org/mskcc/html/9292.cfm">Chris Sander</a>, head of the <a href="http://cbio.mskcc.org/">Computational Biology Center</a> at <a href="http://www.mskcc.org/">Memorial Sloan Kettering Cancer Center (MSKCC)</a>, gave a talk at <a href="http://genome.wustl.edu/">The Genome Center</a>. His <a href="http://cbio.mskcc.org/research/sander.html">group at MSKCC</a> performs a wide variety of <a href="http://cbio.mskcc.org/cancergenomics/gbm/">research on cancer</a>, covering a wide range of biological scales. His talk today spanned this wide range of scales, from interpreting SNPs to modeling cellular pathways of cancer. Thanks to the <a href="http://en.wikipedia.org/wiki/Central_dogma_of_molecular_biology">central dogma of molecular biology</a>, single-nucleotide polymorphisms can readily be translated to amino acid changes. Using knowledge of protein structures and active sites, conformational or activity changes that may lead to changes in protein function can be inferred from these amino acid changes. In addition, the conservation of specific amino acids in homologous proteins across species or across paralogous proteins within a species, can indicate that specific amino acids are important to function; i.e., selective pressures have prevented these amino acids from changing over time. Applying this approach to their participation in the <a href="http://cancergenome.nih.gov/">TCGA</a> study of glioblastoma, they have developed a <a href="http://cbio.mskcc.org/cancergenomics/gbm/mutations/">web interface that allows researchers to evaluate a likelihood that the SNPs found through sequencing of glioblastoma tumors are functionally important</a>. Moving to a larger size scale, he then talked about their <a href="http://cbio.mskcc.org/cancergenomics/gbm/cna/">TCGA work evaluating copy-number variations in glioblastoma samples</a> using RAE. From there, he presented their work developing a glioblastoma pathways network from the genes that were mutated and/or amplified or deleted. Cycling through graphical pathways representations that highlighted amplications and deletions of genes in different patients, it was clear that each patient had their own disease, but there were some commonalities between them. He concluded with their efforts to <a href="http://cbio.mskcc.org/cancergenomics/gbm/pathways/">model these complex cancer pathways</a> and how different combinations of cancer drugs affect them using a set of differential equations with some ideas borrowed from neural networks. As someone who has done modeling of complex systems myself, I found their approach very satisfying; N&times;N interactions, Monte Carlo simulations, gradient-following optimization. Good stuff. The question still remains however: pathways-level analysis will cover 60-80% of people with a specific sub-type of cancer. What about the other 20-40% whose mutations don't fall into those pathways?</p>

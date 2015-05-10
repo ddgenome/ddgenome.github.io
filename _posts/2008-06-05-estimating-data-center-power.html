@@ -1,27 +1,13 @@
 ---
 layout: post
 title: Estimating data center power
-date: 2008-06-05 10:46:34.000000000 -05:00
-categories:
-- IT
 tags:
 - data center
 - IT
 - wustl
-status: publish
-type: post
 published: true
-meta:
-  _edit_last: '2'
-author:
-  login: dd
-  email: dooling@gmail.com
-  display_name: dd
-  first_name: David
-  last_name: Dooling
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
 ---
+
 <p>On a mailing list I am on, someone posted this question.</p>
 <blockquote><p>Here's a slightly off topic question.  My company is looking at doing some engineering for a computer data center.  We are talking power to the data center, electrical engineering.  The Engineer just came to me and was wondering if there are any guidelines out there that give suggestions from an IT standpoint.  He has suggestions from the building engineer.  They have supplied a max kwatt requirement.  The question is what is a reasonable power requirement?  The max kwatt requirement would not necessarily be needed all the time so the need is to try and come to an understanding of what an average requirement might look like or how to go about finding it.  Anyone have any ideas or suggestions on this? Are there any documents or standards that suggest power requirements to data centers?</p></blockquote>
 <p>Depending on your equipment, the power numbers could vary wildly.  For an entire rack of blades, the power usage could be over 20 kW.  High density storage can be 8 kW per rack or more.  Tape robots and network switches don't use much power at all.  You need to project (guess) what the equipment population will be when your data center is fully populated.  Since the population of a data center normally occurs over the span of years and technology changes radically in that time scale, this is quite challenging.  You also need to consider redundancy and the power needed to run the cooling equipment.  If you want full redundancy, you need to double everything, realizing that when things are operating normally, each side will only be drawing about 40% of its total capacity (half of 80%, giving you a 20% efficiency cushion). Ultimately, there is so much uncertainty in just estimating what equipment will be put in the data center over its lifetime that trying to estimate how much power each piece of equipment will use on average is highly speculative.</p>

@@ -1,27 +1,12 @@
 ---
 layout: post
 title: File formats aplenty
-date: 2009-01-28 17:40:52.000000000 -06:00
-categories:
-- genomics
-- IT
 tags:
 - 1000 Genomes
 - genomics
 - informatics
 - IT
-status: publish
-type: post
 published: true
-meta:
-  _edit_last: '2'
-author:
-  login: dd
-  email: dooling@gmail.com
-  display_name: dd
-  first_name: David
-  last_name: Dooling
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
 ---
+
 <p>In a <a href="/2008/05/n-genomes.html">previous post on the 1000 Genomes Project</a>, <a href="http://www.vanderbilt.edu/oor/cores/chgr-computational_genomics.php">David Sexton</a> from the Center for Human Genetics Research at Vanderbilt University asked about the new file formats for alignments, assembly, and genotype data. The alignment and mapping format is called <a href="http://samtools.sourceforge.net/">Sequence Alignment/Map or SAM</a>. The specification is available as a <a href="http://samtools.sourceforge.net/SAM1.pdf">PDF</a> and there is also a C library (<a href="http://samtools.sourceforge.net/samtools/masterTOC.shtml\"">API</a>) available for working with SAM files. You can <a href="http://sourceforge.net/project/showfiles.php?group_id=246254&package_id=300388">download the C source code and tools for working with SAM files (SAMTools)</a>, including a utility for converting <a href="http://maq.sourceforge.net/">Maq</a> map files to SAM files. Genotype data is being stored in the <a href="http://maq.sourceforge.net/glfProgs.shtml">genotype likelihood format (GLF)</a>. Maq (<code>glfgen</code>) can create GLF files from a map file and the reference sequence. Since many other aligners support output in the Maq map format, this means you can generate GLF files from the output of many aligners. Tools that operate on GLF files, including calling SNPs, are available on the Maq site as <a href="http://sourceforge.net/project/showfiles.php?group_id=191815&package_id=293182">glfProgs</a>. Hopefully this all means some (<em>de facto</em>) standards are arising.</p>

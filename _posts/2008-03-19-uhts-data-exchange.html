@@ -1,9 +1,6 @@
 ---
 layout: post
 title: UHTS data exchange
-date: 2008-03-19 22:41:00.000000000 -05:00
-categories:
-- genomics
 tags:
 - genomics
 - health
@@ -11,23 +8,9 @@ tags:
 - Illumina
 - informatics
 - SOLiD
-status: publish
-type: post
 published: true
-meta:
-  blogger_blog: politigenomics.blogspot.com
-  blogger_author: dd
-  blogger_permalink: "/2008/03/uhts-data-exchange.html"
-  _edit_last: '2'
-author:
-  login: dd
-  email: dooling@gmail.com
-  display_name: dd
-  first_name: David
-  last_name: Dooling
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
 ---
+
 <p>I am returning from a <a href="http://bcgc.lbl.gov/UHTS.html">meeting on ultra-high throughput sequence (UHTS) data exchange</a>.  I know what you are thinking, "That sounds like an exciting two days!"  UHTS (or next-gen sequencing or massively parallel sequencing) has greatly expanded the application of genome sequencing across a wide spectrum of biologic research.  What used to be reserved for large sequencing centers and large international projects is now in the purview of individual researchers.  The economics of sequencing are to the point where, while still more costly than lower resolution techniques like expression arrays, the additional information they provide makes them compelling even at higher cost.  Thus, experiments that would have traditionally been carried out on these array platforms are now considered as potential sequencing investigations.</p>
 <p>Perhaps an example is in order to make these abstractions more concrete.  Currently, expression arrays are used to measure relative levels of gene expression in tissues.  More specifically, often the expression (transcription) of genes in two different tissues, e.g., liver and pancreas or tumor and normal, are measured to determine which genes are being expressed at different levels in each of the tissues.  These expression arrays contain tags of DNA complimentary to specific genes, or more specifically <a href="http://en.wikipedia.org/wiki/Exon">exons</a> in genes.  The <a href="http://en.wikipedia.org/wiki/MRNA">mRNA</a> in the tissue is collected, converted into <a href="http://en.wikipedia.org/wiki/CDNA">cDNA</a>, and the cDNA is hybridized onto the array.  The degree of hybridization of each probe is measured and you obtain relative expression levels of of each exon (gene) represented on the array.  In the case of tumor versus normal tissue, what you do not get is any indication as to what mutation might have caused the expression to increase or decrease in one tissue compared to the other.  To get that information, you would have to selectively sequence that portion of the genome, usually a few hundred to a few thousand bases per probe.  The cost of this more complete approach can be high because low resolution probes and/or lots of discrepant expression necessitate a large amount of sequencing; and this sequencing is still primarily done with more expensive, capillary-based methods.  What UHTS provides is a way to short cut this approach.  You can directly sequence the cDNA, thereby obtaining both the sequence and the relative expression levels.  The latter is obtained by aligning each sequence, or "read", generated against all genes.  The genes that have more reads aligned to them are expressed more than those that have fewer reads aligned to them.</p>
 <p>So as the example indicates and as I said above, experiments that have traditionally been carried out on array platforms can now be done on UHTS platforms.  However, both of these platforms have grown up in different cultures with different standards and rules.  This meeting was sponsored by the array folks (<a href="http://www.mged.org/">MGED</a>) and the sequencing folks (<a href="http://gensc.org/gsc/gcat">Genomics Standards Consortium</a>) to get these two groups together to either merge their current standards or come up with new standards that both groups agree on.</p>

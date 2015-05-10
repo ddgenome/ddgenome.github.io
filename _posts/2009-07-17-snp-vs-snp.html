@@ -1,28 +1,13 @@
 ---
 layout: post
 title: SNP vs. SNP
-date: 2009-07-17 13:45:18.000000000 -05:00
-categories:
-- genomics
 tags:
 - genomics
 - informatics
 - science
-status: publish
-type: post
 published: true
-meta:
-  smwpff_settings: a:3:{s:4:"room";s:2:"-1";s:7:"excerpt";s:0:"";s:6:"images";s:0:"";}
-  _edit_last: '2'
-author:
-  login: dd
-  email: dooling@gmail.com
-  display_name: dd
-  first_name: David
-  last_name: Dooling
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
 ---
+
 <p><a href="http://www.dccomics.com/mad/"><img src="assets/spy-vs-spy.jpg" alt="Spy vs. Spy" title="Spy vs. Spy" width="200" height="123" class="alignright size-full wp-image-1375" /></a></p>
 <p>At the <a href="http://www.genome.gov/">NHGRI</a> Sequencing Advisory Panel meeting last week, there was some confusion about how we use <a href="http://en.wikipedia.org/wiki/SNP_array">SNP array</a> data and <a href="http://www.ncbi.nlm.nih.gov/projects/SNP/">dbSNP</a> in the DNA sequencing world. SNP arrays are, when you boil it down, a quick and cheap way to sequence, i.e., determine the nucleotide at, specific DNA positions in the genome. For each sample to be sequenced at <a href="http://genome.wustl.edu/">The Genome Center</a>, we use SNP array data from that sample to measure <em>breadth</em> of sequence coverage we have achieved. In short, at certain points in the sequencing of a sample, variation calling is done, generating, among other things, single nucleotide variants (SNVs, single nucleotides that differ from the standard human reference sequence). Once our variant detection pipeline is able to find 99% or more of the SNPs found on the SNP array of that sample, we are confident that we have good coverage of the genome.</p>
 <p>dbSNP, a catalog of common SNPs, is used in a different way. Any individual is expected to have somewhere around 75-85% of his or her SNVs in common with those in dbSNP. Thus, we expect that when calling SNVs, about 80% of them should appear in dbSNP, i.e., not be private mutations. Thus, dbSNP concordance (the percentage of SNVs found in dbSNP) is used to measure an approximate false positive rate of the detection algorithm. If the rate of dbSNP concordance is much lower than 80%, your results likely have a lot of false positives.</p>

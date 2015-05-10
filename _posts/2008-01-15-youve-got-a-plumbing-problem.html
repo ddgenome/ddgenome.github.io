@@ -1,32 +1,15 @@
 ---
 layout: post
 title: You've got a plumbing problem
-date: 2008-01-15 18:06:00.000000000 -06:00
-categories:
-- genomics
 tags:
 - genomics
 - health
 - informatics
 - science
 - TCGA
-status: publish
-type: post
 published: true
-meta:
-  blogger_blog: politigenomics.blogspot.com
-  blogger_author: dd
-  blogger_permalink: "/2008/01/youve-got-plumbing-problem.html"
-  _edit_last: '2'
-author:
-  login: dd
-  email: dooling@gmail.com
-  display_name: dd
-  first_name: David
-  last_name: Dooling
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
 ---
+
 <p>Last week I attended the <a href="http://cancergenome.nih.gov/">TCGA</a> <a href="http://tcga-data.nci.nih.gov/">Data Portal</a> Use Case Workshop.  TCGA stands for The Cancer Genome Atlas and is an ambitious project to more fully characterize and understand the molecular, i.e., DNA-level, mechanisms at work in cancer.  While the end goal is to gain a rich understanding of all types of cancer, TCGA is a three-year pilot program investigating three types of cancer (brain, ovarian, and lung) and testing whether its approach to study cancer is effective and therefore applicable to many more cancers.  Its approach involves bringing together clinicians, whole genome characterization techniques (e.g., copy number variation (CNV), expression, and methylation platforms), and high-throughput genome sequencing to study the molecular changes that lead to and propagate tumors; allowing each different platform to inform and guide investigations in the others.  For example, whole genome array studies (low resolution) have identified regions which show significant differences in tumor and normal tissues for glioblastoma (brain cancer).  Using this low resolution information, the project has identified genes in these regions that have been sequenced (high resolution) to look for actual DNA changes that lead to the anomalies seen and therefore possibility contribute to some aspect of cancer metabolism.</p>
 <p>Despite some unjustified grumblings about "big science", it is a good, very important project that will contribute greatly to the <a href="http://www.cancer.gov/">NCI</a>'s goal of ending suffering and death from cancer by the middle of the next decade.  Unfortunately, one of the biggest positives of this project is also one of its biggest challenges.  Bringing together all these disparate data sources is monumentally challenging.  Even comparing different platforms that ostensibly do the same thing, e.g., CNV using either Affymetrix or Illumina platforms, can be hard to normalize and cross compare.  Add to that clinical, methylation, expression, segmental duplication, rearrangements, and sequencing data and you have a real data integration problem.  Then after you integrate all the data, you have to make sense of it all.  Oh, and you have to do it very reliably at high throughput.</p>
 <p>Getting back to the Data Portal Use Case Workshop, it was apparent that there will be a large and very diverse audience that will want to access these data in a large number of very different ways.  Some people will want to start from the patient samples and see what results correlate with those groupings.  Some will want to looks at specific patient clinical information and see if longevity correlates with anything.  Some researchers will want to see if their favorite gene is sequenced or if any of the genes in the pathway they study have mutations.  Some will want to access the data from a genomic or chromosomal standpoint, finding areas of interest and drilling down to see why they are interesting.  And so on and so on.  Regardless of where they start, researchers and clinicians will want to slice and dice the data as many ways as they can to find correlations and insights.</p>

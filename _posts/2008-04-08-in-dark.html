@@ -1,28 +1,10 @@
 ---
 layout: post
 title: In the dark
-date: 2008-04-08 16:53:00.000000000 -05:00
-categories:
-- genomics
 tags:
 - genomics
 - Helicos
-status: publish
-type: post
 published: true
-meta:
-  _edit_last: '2'
-  blogger_blog: politigenomics.blogspot.com
-  blogger_author: dd
-  blogger_permalink: "/2008/04/in-dark.html"
-  _wp_old_slug: in-the-dark
-author:
-  login: dd
-  email: dooling@gmail.com
-  display_name: dd
-  first_name: David
-  last_name: Dooling
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
 ---
+
 <p>Recently, my colleague <a href="http://massgenomics.wordpress.com/2008/04/07/helicos-resequences-m13-virus-genome/">posted a write-up</a> of the recent <a href="http://www.helicosbio.com/">Helicos</a> publication in Science on their <a href="http://www.sciencemag.org/cgi/content/abstract/320/5872/106">sequencing of the M13 virus genome</a>.  I've mentioned <a href="http://www.politigenomics.com/2008/03/uhts-data-exchange.html">Helicos before</a>, but have not really talked about their technology.  While their publication is step forward for single-molecule sequencing, their <a href="http://www.helicosbio.com/Products/HelicostradeGeneticAnalysisSystem/tabid/140/Default.aspx">HeliScope</a> faces significant challenges.  While PCR may have its drawbacks, its main advantage is that it gives you some room for error.  No chemical reaction goes to completion, there is always an equilibrium.  Much like other sequencing technologies, the HeliScope reads DNA sequence by incorporating fluorescent-tagged nucleotides sequentially onto single-stranded DNA.  After each nucleotide is incorporated, the tag is read to determine which base was incorporated (each different base has a different colored fluor).  If you are incorporating these nucleotides into a bunch of identical copies of single-stranded DNA (as is the case in PCR-amplified samples), then it does not matter very much if a few strands do not incorporate the nucleotide.  Similarly, it does not matter much if a few of the nucleotides that get incorporated do not have tags on them (after all, the reaction to put tags on the nucleotides does not go to completion either).  If, on the other hand, you are doing single-molecule sequencing, incorporation of a "dark base" means you don't get a reading for the cycle.  In other words, when things go wrong in PCR-amplified sequencing you lose signal; when things go wrong in single-molecule sequencing, you lose information.  To get around this, Helicos sequences all fragments twice.  This reduces the throughput of the instrument and still leaves open the possibility that "dark bases" will show up in the same location in the fragment.  As you increase read lengths, these issues of dark bases and other problems become even more pronounced.  A final thing to consider is that M13 is a far cry from a human genome or even <span style="font-style:italic;">C. elegans</span>.  This is all not to say that the Helicos technology does not have promise, just that they have some catching up to do.</p>

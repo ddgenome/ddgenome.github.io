@@ -1,9 +1,6 @@
 ---
 layout: post
 title: Sequencing AML with paired-end reads
-date: 2009-04-29 09:20:25.000000000 -05:00
-categories:
-- genomics
 tags:
 - genomics
 - health
@@ -11,18 +8,7 @@ tags:
 - informatics
 - science
 - wustl
-status: publish
-type: post
 published: true
-meta:
-  _edit_last: '2'
-author:
-  login: dd
-  email: dooling@gmail.com
-  display_name: dd
-  first_name: David
-  last_name: Dooling
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
 ---
+
 <p>When <a href="http://genome.wustl.edu/">The Genome Center</a> performed the <a href="/2008/11/first-whole-cancer-genome-sequenced.html">sequencing of the first whole cancer genome</a>, the state of the art for next-generation sequencing was single-end, or fragment, reads. While these data allowed the discovery of single nucleotide variants and small <a href="http://en.wikipedia.org/wiki/Indel">indels</a>, they do not allow discovery of structural variation, e.g., indels larger than a few bases, <a href="http://accessdna.com/info/condition.aspx?topic=371">inversions, and translocations</a>. With the advent of pair-end sequencing on the next-generation sequencing platforms, i.e., two reads sequenced from each end of a DNA fragment of known size, you are now able to detect these more complicated types of variation. When you align the two end reads back to the reference human genome, if they map the expected distance apart with the appropriate orientation, then all is as expected. If, however, they map at a greater distance, then there is possibly a deletion in the genome with respect to the reference. If the two end reads map at a distance closer than expected, there is possibly an insertion in the genome with respect to the reference. If their orientation is not as expected, there could have been an inversion. If one end maps to one chromosome and the other maps to another chromosome, it indicates a possible translocation. Using paired-end sequencing, this is exactly the sort of analysis we have done when sequencing the <a href="http://www.genomeweb.com/sequencing/researchers-finding-mutations-second-aml-genome">second AML genome</a>. The ability to detect these types of variations opens the door to whole new sets of analysis and genomic comparisons, allowing us to more deeply probe the mutations that convert a healthy genome into a cancerous genome.</p>

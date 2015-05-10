@@ -1,27 +1,13 @@
 ---
 layout: post
 title: When stars align
-date: 2008-06-13 14:32:16.000000000 -05:00
-categories:
-- genomics
 tags:
 - genomics
 - informatics
 - software
-status: publish
-type: post
 published: true
-meta:
-  _edit_last: '2'
-author:
-  login: dd
-  email: dooling@gmail.com
-  display_name: dd
-  first_name: David
-  last_name: Dooling
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
 ---
+
 <p>If you are at all familiar with the massively parallel sequencing platforms, you know that the raw data, the images, look a lot like star field pictures.<a href="http://www.politigenomics.com/wp-content/uploads/2008/06/tile.jpg"><img src="assets/tile.jpg" alt="Solexa tile" title="Solexa tile" class="alignright size-medium wp-image-95" /></a> Once you process all these images, you get DNA sequences, called "reads". For these technologies, the reads are typically short, 30 to 50 bases, which presents difficulties when trying to align these reads back to a reference genome. For one, the shorter the sequence, the <a href="http://www.ncbi.nlm.nih.gov/sites/entrez?Db=pubmed&Cmd=ShowDetailView&TermToSearch=16275781&ordinalpos=6&itool=EntrezSystem2.PEntrez.Pubmed.Pubmed_ResultsPanel.Pubmed_RVDocSum">less unique</a> it is, i.e., the more places in the reference genome it can match. However, the data is not the only problem. The reference genome is a problem too. While each of us has two different versions of each <a href="http://en.wikipedia.org/wiki/Autosome">autosomal chromosome</a> (i.e., you have a diploid genome), when you <a href="ftp://ftp.ensembl.org/pub/release-49/fasta/homo_sapiens/dna/">download</a> the <a href="http://genome.cse.ucsc.edu/cgi-bin/hgGateway">human reference genome</a>, you get a single base at each position (i.e., a haploid reference) (there are a few exceptions where an alternative haplotype is provided as a separate sequence). The reference is distributed in <a href="http://www.ncbi.nlm.nih.gov/blast/fasta.shtml">FASTA format</a> which can support the full <a href="http://en.wikipedia.org/wiki/DNA_sequence">IUPAC DNA codes</a> and therefore would allow one to specify multiple nucleotides at a given position, e.g., R means G or A. Unfortunately, most aligners do not support the full set of codes by default (one exception is <a href="http://bioinformatics.bc.edu/marthlab/Mosaik">Mosaik</a>).</p>
 <p>Not supporting the full set of nucleotide codes is only part of the problem of representing variation in a reference genome. Insertions and deletions (<a href="http://en.wikipedia.org/wiki/Indel">indels</a>) and more complex structural variations cannot be represented in a single FASTA reference. As is the case for the alternative haplotypes in the human reference sequence, you can have multiple haplotypes in a reference but they are represented as multiple, distinct sequences which often have portions of their sequences that are identical (especially at the beginning and end). This presents a difficulty for short-read aligners which are trying to uniquely align a 30 b read. If the same 30 b sequence appears in multiple sequences in the reference, the aligner has no way of knowing whether the identical reference sequences are truly different or just fragments of alternative haploypes. Fortunately, there are other formats and representations that can accommodate indels, rearrangements, and repeats without artificially introducing repetitive sequence. One such format is <a href="http://en.wikipedia.org/wiki/De_Bruijn_graph">de Bruijn graphs</a>. Several assemblers for short-read sequences already use de Bruijn graphs to represent their assemblies, e.g., <a href="http://nbcr.sdsc.edu/euler/euler.htm">EULER</a> and <a href="http://www.ebi.ac.uk/~zerbino/velvet/">Velvet</a>. One could imagine that the overlap engine from these assemblers could be converted into an algorithm to align sequence to a reference represented as a de Bruijn graph. While de Bruijn graphs may be overkill for such a task, there are undoubtedly efficient ways to represent multiple, complex haplotypes and align reads against them.</p>
 <p>Another challenge for aligners is aligning <a href="http://en.wikipedia.org/wiki/CDNA_library">cDNA</a> sequence to a <a href="http://en.wikipedia.org/wiki/Transcriptome">transcriptome</a> reference. Captured mRNA used to create a cDNA library can be in a variety of states, e.g., before and after splicing, and represent various splice isoforms. Representing all possible processing states and splice isoforms in a FASTA reference is extremely difficult. When you try to do it, you end up with a situation similar to the alternative haplotypes mentioned above: identical sequences representing the same parts of the reference confuse the aligner. Fortunately, the same solution to this problem discussed above can be applied here too.</p>

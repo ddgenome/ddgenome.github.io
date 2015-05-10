@@ -1,29 +1,12 @@
 ---
 layout: post
 title: In defense of defensive programming
-date: 2008-01-04 14:23:00.000000000 -06:00
-categories:
-- IT
 tags:
 - informatics
 - software
-status: publish
-type: post
 published: true
-meta:
-  blogger_blog: politigenomics.blogspot.com
-  blogger_author: dd
-  blogger_permalink: "/2008/01/in-defense-of-defensive-programming.html"
-  _edit_last: '2'
-author:
-  login: dd
-  email: dooling@gmail.com
-  display_name: dd
-  first_name: David
-  last_name: Dooling
-excerpt: !ruby/object:Hpricot::Doc
-  options: {}
 ---
+
 <p>Someone emails me asking why a bioinformatics program (more specifically a short-read aligner) that works for someone else gives them a segmentation fault when they try to run it using the same command-line arguments.  The program is written in <a href="http://en.wikipedia.org/wiki/C_(programming_language)">C</a> and is being run on a computer running <a href="http://www.gnu.org/">GNU</a>/<a href="http://www.linux.org/">Linux</a>.  This problem has caused him quite a bit of consternation and it is only after a while he emails me wondering why.  After looking at the problem a bit and eliminating some usual suspects, it turns out that one of the files that the program was trying to read had restrictive permissions that did not allow the user to read it.  Why does this cause a segmentation fault?  Simply put, poor programming.  All that needed to be done was to make sure the FILE* pointer actually pointed to something before using it.  In other words, checking the return value of a function that has a somewhat high probability of failing.  You see this all the time in software development (and use), simple things that can be done to make the program more reliable that just aren't done.  It is especially prevalent in biological software.</p>
 <p>So why are these little things not being done?  Are they not being taught?  Are they not being learned?  Are programming languages to blame?  I think it is a little bit of all these things.  Checking the return value of a function you call is mentioned when you begin learning to program or learn a new language, but from the <a href="http://www.gnu.org/fun/jokes/helloworld.html">very first example</a> you are shown to the last, error checking is left out to save space, improve readability, increase clarity, or some other such excuse.  Let's face it, most "Hello, world." programs you see do not look like <a href="http://cvs.savannah.gnu.org/viewvc/hello/src/hello.c?revision=1.29&amp;root=hello&amp;view=markup">this</a> (and even it does not check the return value of <code>printf</code> (not saying that you should)).  Scripting languages also tend to encourage the daisy-chaining of commands.  This nesting if commands not only discourages checking return values, it more or less prevents it.  <a href="http://www.ruby-lang.org/">Ruby</a>, while a great language, seems to suffer from this quite acutely because of the ease of sending one message after another to objects (even <a href="http://pragdave.blogs.pragprog.com/pragdave/2007/12/pipelines-using.html">using</a> <a href="http://pragdave.blogs.pragprog.com/pragdave/2008/01/pipelines-using.html">pipes</a>).  Of course, Ruby, like most OOP languages, has exceptions, but it seems they are rarely seen out in the wild.</p>
 <p>So how about this for a New Year's resolution: check the return value of functions/methods you call.  You can start small: just check the return value of your <code>system()</code> calls.  Then maybe you could gradually checking more and more return values.  After you get used to that, you can added useful error messages to the user when things do go bad.  Finally, you could have your functions/methods return useful values themselves.  Think of the possibilities.</p>
