@@ -1,7 +1,6 @@
 ---
 layout: page
 title: About
-permalink: /about/
 ---
 
 PolITiGenomics is a blog by David Dooling about the confluence (and sometimes
