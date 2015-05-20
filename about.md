@@ -29,3 +29,6 @@ disciplines to bear on problems in human health.
 David Dooling received his Ph.D. in [Chemical
 Engineering](http://www.chem-biol-eng.northwestern.edu/) from [Northwestern
 University](http://www.northwestern.edu/).
+
+Background header image of this blog is cropped from an image taken by [Louis
+M. Staudt](https://commons.wikimedia.org/wiki/File:Mouse_cdna_microarray.jpg).
