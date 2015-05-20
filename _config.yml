@@ -12,4 +12,4 @@ github_username: ddgenome
 markdown: kramdown
 paginate: 5
 #permalink: /:year/:month/:title/
-exclude: ["less","README.md","*.hide"]
+exclude: ["README.md","Gemfile*","LICENSE","less","*.hide"]
