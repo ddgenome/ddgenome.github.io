@@ -13,3 +13,5 @@ markdown: kramdown
 paginate: 5
 #permalink: /:year/:month/:title/
 exclude: ["README.md","Gemfile*","LICENSE","jekyll-clean-front-matter.rb","less","*.hide"]
+gems:
+  - jekyll-sitemap
