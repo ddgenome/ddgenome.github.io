@@ -14,7 +14,9 @@ subtitle: "Politics, Information Technology, and Genomics"
     <a href="{{ post.url }}">Full Post</a>
   </p>
 </div>
-<hr>
+{% if forloop.last != true or paginator.total_pages > 1 %}
+<hr />
+{% endif %}
 {% endfor %}
 
 <!-- Pager -->
