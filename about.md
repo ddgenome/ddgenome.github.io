@@ -16,19 +16,9 @@ agriculture, GMOs, and politics.
 
 <img align="left" title="David Dooling" src="/assets/dd.jpg"
 alt="David Dooling" width="128" height="128" style="margin: 20px" />
-David Dooling is a Cloud Architect at
-[Monsanto Company](http://www.monsanto.com) and contributes to the
-[Monsanto Engineering Blog](http://engineering.monsanto.com).  Before
-joining Monsanto, David oversaw the Analysis Developers, Laboratory
-Information Management Systems (LIMS), and the Information Systems
-groups at the [McDonnell Genome Institute](http://genome.wustl.edu/)
-at [Washington University in St.  Louis](http://www.wustl.edu/).  He
-is focused on bringing a wide range of scientific and computational
-disciplines to bear on problems in human health.
+David Dooling has worked in software development, scientific
+computing, IT, genomics, and human health.
 
-David Dooling received his Ph.D. in [Chemical
-Engineering](http://www.chem-biol-eng.northwestern.edu/) from [Northwestern
-University](http://www.northwestern.edu/).
-
-Background header image of this blog is cropped from an image taken by [Louis
+Background header image of this blog is cropped and modified from an
+image taken by [Louis
 M. Staudt](https://commons.wikimedia.org/wiki/File:Mouse_cdna_microarray.jpg).
