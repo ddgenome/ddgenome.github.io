@@ -1,26 +1,46 @@
-# [Start Bootstrap](http://startbootstrap.com/) - [Clean Blog](http://startbootstrap.com/template-overviews/clean-blog/)
+# PolITiGenomics Blog
 
-[Clean Blog](http://startbootstrap.com/template-overviews/clean-blog/) is a stylish, responsive blog theme for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/). This theme features a blog homepage, about page, contact page, and an example post page along with a working PHP contact form.
+This is the person blog of [David Dooling][dd].  The site is built
+using [Jekyll][] and hosted on [GitHub Pages][gh-pages].
 
-## Getting Started
+[dd]: https://github.com/ddgenome (David Dooling on GitHub)
+[Jekyll]: http://jekyllrb.com/ (Jekyll Static Site Generator)
+[gh-pages]: https://pages.github.com/ (GitHub Pages)
 
-To use this theme, choose one of the following options to get started:
-* Download the latest release on Start Bootstrap
-* Fork this repository on GitHub
+## Contributing
 
-## Bugs and Issues
+Create a Markdown file including the Jekyll header in the
+[_posts](_posts/) subdirectory, commit, and push.  The site should be
+automatically built and published by GitHub.
 
-Have a bug or an issue with this theme? [Open a new issue](https://github.com/IronSummitMedia/startbootstrap-clean-blog/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/clean-blog/).
+To build locally, make sure you have Jekyll installed and run
 
-## Creator
+```console
+$ bundle exec jekyll build
+```
 
-Start Bootstrap was created by and is maintained by **David Miller**, Managing Parter at [Iron Summit Media Strategies](http://www.ironsummitmedia.com/).
+To build and serve the site locally, run
 
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
+```console
+$ bundle exec jekyll serve
+```
 
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+and go to http://localhost:4000/ to view the site.
 
-## Copyright and License
+To update dependencies, run
 
-Copyright 2013-2015 Iron Summit Media Strategies, LLC. Code released under the [Apache 2.0](https://github.com/IronSummitMedia/startbootstrap-clean-blog/blob/gh-pages/LICENSE) license.
+```console
+$ bundle update
+```
+
+## Origin
+
+This blog was started using WordPress and then converted to [Jekyll
+and GitHub Pages][jekyll-gh-pages].  The design was based on [Clean
+Blog][clean-blog] a stylish, responsive blog theme for [Bootstrap][]
+created by [Start Bootstrap][bootstrap-start].
+
+[jekyll-gh-pages]: http://www.politigenomics.com/2015/05/20/move-to-jekyl-and-github-pages.html (Move to Jekyll and GitHub Pages)
+[clean-blog]: http://startbootstrap.com/template-overviews/clean-blog/ (Clean Blog)
+[Bootstrap]: http://getbootstrap.com/ (Bootstrap)
+[bootstrap-start]: http://startbootstrap.com/ (Start Bootstrap)

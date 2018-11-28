@@ -3,8 +3,8 @@ title: PolITiGenomics
 description: > # this means to ignore newlines until "baseurl:"
   The nexus of Politics, Information Technology, and Genomics.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.politigenomics.com" # the base hostname & protocol for your site
-header-img: 'img/array-bg.jpg'
+url: "https://www.politigenomics.com" # the base hostname & protocol for your site
+header-img: "img/array-bg.jpg"
 twitter_username: ddgenome
 github_username: ddgenome
 
@@ -12,6 +12,13 @@ github_username: ddgenome
 markdown: kramdown
 paginate: 5
 #permalink: /:year/:month/:title/
-exclude: ["README.md","Gemfile*","LICENSE","jekyll-clean-front-matter.rb","less","*.hide"]
-gems:
+exclude:
+  - "README.md"
+  - "Gemfile*"
+  - "LICENSE"
+  - "jekyll-clean-front-matter.rb"
+  - "less"
+  - "*.hide"
+plugins:
+  - jekyll-paginate
   - jekyll-sitemap
