@@ -28,8 +28,8 @@ and left them to continue walking.  A President heard this and, seeing
 he could score political points, sent military troops to the border.
 So too, local officials, when the caravan arrived in their town,
 corralled them in a small stadium. When the caravan went to the
-border, border officials shut down the border.  See they would not be
-dissuaded, they also sprayed them with tear gas.
+border, border officials shut down the border.  Seeing they would not
+be dissuaded, they also sprayed them with tear gas.
 
 "Which of these three do you think was a neighbor to the caravan?"
 
