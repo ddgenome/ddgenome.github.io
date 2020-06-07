@@ -1,7 +1,7 @@
 # Site settings
 title: David Dooling's Blog
 description: >
-  The nexus of Politics, Information Technology, and other random things.
+  Politics, Information Technology, and Science.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://ddgenome.github.io"
 header-img: "img/array-bg.jpg"
