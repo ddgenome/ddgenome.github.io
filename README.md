@@ -1,13 +1,20 @@
-# PolITiGenomics Blog
+# David Dooling's blog
 
 This is the person blog of [David Dooling][dd],
-[www.politigenomics.com/][pig].  The site is built using
-[Jekyll][] and hosted on [GitHub Pages][gh-pages].
+[ddgenome.github.io][ghp].  The site is built using [Jekyll][] and
+hosted on [GitHub Pages][gh-pages].
+
+The design of this blog was based on [Clean Blog][clean-blog], a
+stylish, responsive blog theme for [Bootstrap][] created by [Start
+Bootstrap][bootstrap-start].
 
 [dd]: https://github.com/ddgenome (David Dooling on GitHub)
-[pig]: https://www.politigenomics.com/ (Politics, IT, and Genomics Blog)
+[ghp]: https://ddgenome.github.io/ (David Dooling's Blog)
 [Jekyll]: http://jekyllrb.com/ (Jekyll Static Site Generator)
 [gh-pages]: https://pages.github.com/ (GitHub Pages)
+[clean-blog]: http://startbootstrap.com/template-overviews/clean-blog/ (Clean Blog)
+[Bootstrap]: http://getbootstrap.com/ (Bootstrap)
+[bootstrap-start]: http://startbootstrap.com/ (Start Bootstrap)
 
 ## Contributing
 
@@ -37,13 +44,7 @@ $ bundle update
 
 ## Origin
 
-This blog was started using [WordPress][wp] and then converted to
-[Jekyll and GitHub Pages][jekyll-gh-pages].  The design was based on
-[Clean Blog][clean-blog] a stylish, responsive blog theme for
-[Bootstrap][] created by [Start Bootstrap][bootstrap-start].
-
-[wp]: https://wordpress.org/ (External Attack Vector)
-[jekyll-gh-pages]: http://www.politigenomics.com/2015/05/20/move-to-jekyl-and-github-pages.html (Move to Jekyll and GitHub Pages)
-[clean-blog]: http://startbootstrap.com/template-overviews/clean-blog/ (Clean Blog)
-[Bootstrap]: http://getbootstrap.com/ (Bootstrap)
-[bootstrap-start]: http://startbootstrap.com/ (Start Bootstrap)
+This was always David Dooling's blog, but it went under another name
+and had another structure.  I've rearranged all the pages and gave up
+the old domain to break as much of the connection to that blog as
+possible.

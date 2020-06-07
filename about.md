@@ -4,13 +4,8 @@ title: About
 subtitle: David Dooling
 ---
 
-PolITiGenomics is a blog by David Dooling about the confluence (and
-sometimes incongruence) of several of the most important topics
-surrounding the future of human health: genomics, agriculture,
-information technology, and politics.  Entries will cover topics
-including genomics research, next-generation sequencing technologies,
-informatics, computer hardware and software, free software,
-agriculture, GMOs, and politics.
+This is a blog by David Dooling about a variety of things but largely
+dealing with information technology, politics, and science.
 
 ## About David Dooling
 

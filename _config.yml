@@ -1,9 +1,9 @@
 # Site settings
-title: PolITiGenomics
-description: > # this means to ignore newlines until "baseurl:"
-  The nexus of Politics, Information Technology, and Genomics.
+title: David Dooling's Blog
+description: >
+  The nexus of Politics, Information Technology, and other random things.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://www.politigenomics.com" # the base hostname & protocol for your site
+url: "https://ddgenome.github.io"
 header-img: "img/array-bg.jpg"
 twitter_username: ddgenome
 github_username: ddgenome
@@ -11,13 +11,12 @@ github_username: ddgenome
 # Build settings
 markdown: kramdown
 paginate: 5
-#permalink: /:year/:month/:title/
+permalink: /:year/:month/:title/
 exclude:
-  - "README.md"
-  - "Gemfile*"
-  - "LICENSE"
-  - "jekyll-clean-front-matter.rb"
-  - "less"
+  - README.md
+  - Gemfile*
+  - LICENSE
+  - less
   - "*.hide"
 plugins:
   - jekyll-paginate
