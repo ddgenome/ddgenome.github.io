@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Masks&#58; The When and Why
+title: "Masks: The When and Why"
 tags:
 - science
 ---
@@ -42,6 +42,12 @@ catch up with demand, the CDC made these things clear:
 
 -   When around someone who has COVID-19, wear a medical mask.
 
+Why do the CDC and WHO recommend healthy people wear cloth masks?
+Because 30% or more of people who get COVID-19 are asymptomatic
+carriers.  Despite not having symptoms, these carriers shed the virus
+when breathing, talking, singing, coughing, sneezing, etc.  This means
+they expose everyone around them to COVID-19.
+
 Of late there is a lot of talk about how people who wear masks are
 scared or not tough/strong/cool.  Since wearing a cloth mask is about
 protecting the _people around you_, not yourself, it seems an odd, or
@@ -52,6 +58,13 @@ at least ill-informed conclusion.
 > interests but each of you to the interests of the others.
 >
 > Philippians 2:3-4
+
+The real irony is that the people who refuse to wear masks are often
+the same ones demanding a rapid reopening of the economy.  If you want
+businesses to open and stay open, i.e., avoid a second peak of cases,
+you _need_ physical distancing and cloth mask wearing.  So stop being
+a tough guy, start thinking about others, help our economy, and wear a
+cloth mask in public.
 
 [who]: https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/when-and-how-to-use-masks&publication=advice-on-the-use-of-masks-in-the-community-during-home-care-and-in-healthcare-settings-in-the-context-of-the-novel-coronavirus-(2019-ncov)-outbreak
 [fox]: https://www.foxnews.com/world/who-guidance-healthy-people-wear-masks-around-coronavirus-patients
