@@ -1,0 +1,16 @@
+---
+layout: post
+title: COVID-19 Resources
+tags:
+- science
+---
+
+COVID-19 resources I have found useful.
+
+-   [Coronavirus: Why You Must Act Now](https://medium.com/@tomaspueyo/coronavirus-act-today-or-people-will-die-f4d3d9cd99ca)
+-   [Coronavirus: The Hammer and the Dance](https://medium.com/@tomaspueyo/coronavirus-the-hammer-and-the-dance-be9337092b56)
+-   [The Risks - Know Them - Avoid Them](https://www.erinbromage.com/post/the-risks-know-them-avoid-them)
+-   [Coronavirus Pandemic (COVID-19) – the data](https://ourworldindata.org/coronavirus-data)
+-   [This interactive chart shows countries flattening their COVID-19 curves](https://www.weforum.org/agenda/2020/03/covid19-coronavirus-countries-infection-trajectory/)
+
+I will update as I find more.
