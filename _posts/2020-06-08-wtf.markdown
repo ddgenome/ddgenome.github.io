@@ -1,0 +1,24 @@
+---
+layout: post
+title: WTF
+tags:
+- politics
+published: true
+---
+
+Today, the Washington Post posted a detailed timeline of the most
+remarkable abuse of power by a President of the United States I have
+witnessed in my lifetime: [The crackdown before Trump’s photo
+op][wapo].  In short, after declaring himself "the law and order
+President" (that ended well for Richard Nixon, right?), the head of
+the executive branch used police, the military, the Federal Bureau of
+Prisons, and park rangers (park rangers!) to violently displace
+largely peaceful protesters from in front of a historical church to
+take a photo with _a_ Bible.  How is willfully and intentionally
+violating the First Amendment rights of citizens by the President, who
+is sworn to uphold the Constitution, not a bigger story?  I know there
+is a lot going on, but have we become so inured to bad behavior from
+this President that what by any other President at any other time
+would be an impeachable offense is largely ignored?
+
+[wapo]: https://www.washingtonpost.com/investigations/2020/06/08/timeline-trump-church-photo-op/?arc404=true
