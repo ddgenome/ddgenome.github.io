@@ -1,0 +1,31 @@
+---
+layout: post
+title: Black Lives Matter
+tags:
+- politics
+published: true
+---
+
+We've been fighting systemic racism for decades and while on the one
+hand much has improved since the mid-20th century, it also feels like
+not much has changed since Michael Brown was murdered in Ferguson six
+years ago.  Social media posts and protests are good, but what can we
+do to sustain our current volition into systemic change?  Here are
+some resources I have found useful when trying to answer than
+question.
+
+-   [Black Live Matter](https://blacklivesmatter.com/)
+-   [Barack Obama - How to Make this Moment the Turning Point for Real Change](https://medium.com/@BarackObama/how-to-make-this-moment-the-turning-point-for-real-change-9fa209806067)
+-   [The Brown Bookshelf](https://thebrownbookshelf.com/)
+-   [ArchCity Defenders](https://www.archcitydefenders.org/)
+-   [The Bail Project](https://bailproject.org/)
+-   [US Black Chambers, Inc.](https://usblackchambers.org/)
+-   [National Black Chamber of Commerce](https://www.nationalbcc.org/)
+-   [Heartland St. Louis Black Chamber of Commerce](https://hbcstl.com/)
+-   [Kroger Allyship Guide (pdf)](https://www.thekrogerco.com/wp-content/uploads/2020/06/Kroger-Allyship-Guide.pdf)
+-   [Equal Justice Initiative](https://eji.org/)
+-   [Black Girls Code](https://www.blackgirlscode.com/)
+-   [Code 2040](https://www.code2040.org/)
+-   [Rock the Vote](https://www.rockthevote.org/)
+
+I'll update this list as I find more.
