@@ -2,15 +2,15 @@
 layout: post
 title: Black Lives Matter
 tags:
-- politics
+    - politics
 published: true
 ---
 
 We've been fighting systemic racism for decades and while on the one
 hand much has improved since the mid-20th century, it also feels like
 not much has changed since Michael Brown was murdered in Ferguson six
-years ago.  Social media posts and protests are good, but what can we
-do to sustain our current volition into systemic change?  Here are
+years ago. Social media posts and protests are good, but what can we
+do to sustain our current volition into systemic change? Here are
 some resources I have found useful when trying to answer that
 question.
 
@@ -29,5 +29,6 @@ question.
 -   [Black Girls Code](https://www.blackgirlscode.com/)
 -   [Code 2040](https://www.code2040.org/)
 -   [Rock the Vote](https://www.rockthevote.org/)
+-   [For the Culture STL](https://www.fortheculturestl.com/)
 
 I'll update this list as I find more.
