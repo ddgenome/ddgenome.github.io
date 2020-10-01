@@ -47,6 +47,6 @@ absolute numbers and per capita.
 
 So it is not the news that causes us to fear COVID-19, it is our
 understanding of math and science that leads us to not fear, but take
-this pandemic seriously. It is our beliefs that others have as much
+this pandemic seriously. It is our belief that others have as much
 value as we do that we choose to sacrifice our convenience for the
 health and lives of others.
