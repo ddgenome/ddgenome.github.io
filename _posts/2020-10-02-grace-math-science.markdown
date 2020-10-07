@@ -31,22 +31,23 @@ flu accounts for 650,000 per year, COVID-19 will account for nearly
 1.5 million. Remember also that these are based on _confirmed_
 numbers, the actual numbers are almost certainly higher.
 
-The total deaths from the flu per year in the United States is about
-65,000. The United States recently passed 200,000 deaths from
-COVID-19. This total covers the past seven months. Currently there are
-about 750 deaths per day in the United States from COVID-19. The best
-estimates for widespread vaccine penetration in the United States is
-late first quarter into second quarter of 2021, so we will likely see
-this rate of deaths for the next five months. That will result in an
-additional 70,000 deaths, bringing the total to 270,000, or over four
-times more per year than the flu. It is worth noting that the United
-States has about 10% of the total flu deaths per year but currently
-has about 20% of the deaths from COVID-19. The United States has the
-highest number of COVID-19 cases and deaths in the world, both in
-absolute numbers and per capita.
+The total deaths from the flu per year in the United States has
+averaged about 40,000 over the last decade.  The United States
+recently passed 200,000 deaths from COVID-19. This total covers the
+past seven months. Currently there are 750&ndash;1000 deaths per day
+in the United States from COVID-19. The best estimates for widespread
+vaccine penetration in the United States is late first quarter into
+second quarter of 2021, so we will likely see this rate of deaths for
+the next five months. That will result in about an additional 100,000
+deaths, bringing the total to over 300,000, or over seven times more
+per year than the flu. It is worth noting that the United States has
+less than 10% of the total flu deaths per year but currently has about
+20% of the deaths from COVID-19. The United States has the highest
+number of COVID-19 cases and deaths in the world, both in absolute
+numbers and per capita.
 
 So it is not the news that causes us to fear COVID-19, it is our
 understanding of math and science that leads us to not fear, but take
 this pandemic seriously. It is our belief that others have as much
-value as we do that we choose to sacrifice our convenience for the
+value as we do that leads us to sacrifice our convenience for the
 health and lives of others.
