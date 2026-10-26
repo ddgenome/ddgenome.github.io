@@ -6,7 +6,9 @@ hosted on [GitHub Pages][gh-pages].
 
 The design of this blog was based on [Clean Blog][clean-blog], a
 stylish, responsive blog theme for [Bootstrap][] created by [Start
-Bootstrap][bootstrap-start].
+Bootstrap][bootstrap-start]:
+
+https://github.com/IronSummitMedia/startbootstrap-clean-blog
 
 [dd]: https://github.com/ddgenome (David Dooling on GitHub)
 [ghp]: https://ddgenome.github.io/ (David Dooling's Blog)
